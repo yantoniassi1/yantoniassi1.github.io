@@ -1,16 +1,16 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
-      "text": "Weekly Wage",
+      "text": "Inflation in Brazil",
       "anchor": "start",
-      "subtitle": "Nominal average weekly wage, £ | Source: ONS through ECO API",
-      "fontSize": 14,
-      "subtitleFontSize":12,
-      "color": "#000000",
+      "subtitle": "Source: IBGE through ECO API",
+      "fontSize": "14",
+      "subtitleFontSize": "8",
+      "color": "#257b19",
       "subtitleColor": "#000000"
     },
-    "height": 450,
-    "width": 600,
+    "width":250,
+    "height":300,
     "autosize": {
       "type": "fit",
       "contains": "padding"
@@ -21,15 +21,15 @@
       "strokeOpacity": 0
     },
     "data": {
-      "url": "https://api.economicsobservatory.com/gbr/wage?vega",
+      "url": "https://api.economicsobservatory.com/bra/infl?vega",
       "format": {
         "type": "json"
       }
     },
     "mark": {
       "type": "line",
-      "color": "#f4134d",
-      "strokeWidth": 2
+      "color": "#2f7415",
+      "strokeWidth": "2"
     },
     "encoding": {
       "x": {
@@ -45,10 +45,10 @@
         "field": "value",
         "type": "quantitative",
         "axis": {
-          "title": "",
+          "title": "%",
           "titleColor": "#122B39",
           "grid": false
         }
       }
     }
-  }
+}

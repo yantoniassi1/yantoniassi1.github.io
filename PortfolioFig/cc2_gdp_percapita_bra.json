@@ -1,0 +1,54 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "GDP per capita",
+      "anchor": "start",
+      "subtitle": "Source: IBGE ",
+      "fontSize": "14",
+      "subtitleFontSize": "8",
+      "color": "#ff8a05",
+      "subtitleColor": "#000000"
+    },
+    "height": 250,
+    "width": 300,
+    "autosize": {
+      "type": "fit",
+      "contains": "padding"
+    },
+    "background": "#ffffff",
+    "view": {
+      "fill": "#ffffff",
+      "strokeOpacity": 0
+    },
+    "data": {
+      "url": "https://api.economicsobservatory.com/bra/gdpp?vega",
+      "format": {
+        "type": "json"
+      }
+    },
+    "mark": {
+      "type": "line",
+      "color": "#ffa861",
+      "strokeWidth": "2"
+    },
+    "encoding": {
+      "x": {
+        "field": "date",
+        "type": "temporal",
+        "axis": {
+          "title": "",
+          "titleColor": "#122B39",
+          "grid": false
+        }
+      },
+      "y": {
+        "field": "value",
+        "type": "quantitative",
+        "axis": {
+          "title": "Current BRL",
+          "titleColor": "#122B39",
+          "grid": false
+        }
+      }
+    }
+}
