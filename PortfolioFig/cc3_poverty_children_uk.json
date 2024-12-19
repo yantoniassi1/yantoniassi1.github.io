@@ -1,0 +1,70 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Percentage of children, living in a family where no-one is disabled, in relative low income",
+        "anchor": "start",
+        "subtitle": "Source: Office for National Statistics",
+        "fontSize": "10",
+        "subtitleFontSize": "8",
+        "color": "#b9676e",
+        "subtitleColor": "#000000"
+    },
+    "height": 250,
+    "width": 500,
+    "autosize": {
+        "type": "fit",
+        "contains": "padding"
+    },
+    "background": "#ffffff",
+    "view": {
+        "fill": "#ffffff",
+        "strokeOpacity": 0
+    },
+    "data": {
+        "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/refs/heads/main/PortfolioData/cc3_Percentage%20of%20children%2C%20living%20in%20a%20family%20where%20no-one%20is%20disabled%2C%20in%20relative%20low%20income%20-%20AHC.csv",
+        "format": {
+            "type": "csv"
+        }
+    },
+    "mark": {
+        "type": "line",
+        "color": "pink",
+        "strokeWidth": 2,
+        "point": {
+            "filled": false,
+            "fill": "lightgray",
+            "stroke": "lightgray",
+            "size": 10
+        }
+    },
+    "encoding": {
+        "x": {
+            "field": "Year",
+            "type": "ordinal",
+            "axis": {
+                "title": "",
+                "titleColor": "#122B39",
+                "grid": false,
+                "labelAngle": 45
+            }
+        },
+        "y": {
+            "field": "pct_lowincome_children",
+            "type": "quantitative",
+            "scale": {"domain": [0, 40]},
+            "axis": {
+                "title": "Percentage of Children",
+                "titleColor": "#122B39",
+                "grid": false
+            }
+        },
+        "tooltip": [
+            {"field": "Year", "type": "ordinal", "title": "Year"},
+            {
+                "field": "pct_lowincome_children",
+                "type": "quantitative",
+                "title": "Percentage of Children"
+            }
+        ]
+    }
+}

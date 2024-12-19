@@ -1,0 +1,69 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Number of Deaths Due to Pregnancy, Childbirth, and Perinatal Conditions\nin Children and Young People in England and Wales",
+        "anchor": "start",
+        "subtitle": "Source: Office for National Statistics",
+        "fontSize": "10",
+        "subtitleFontSize": "8",
+        "color": "#72020b",
+        "subtitleColor": "#000000"
+    },
+    "height": 250,
+    "width": 500,
+    "autosize": {
+        "type": "fit",
+        "contains": "padding"
+    },
+    "background": "#ffffff",
+    "view": {
+        "fill": "#ffffff",
+        "strokeOpacity": 0
+    },
+    "data": {
+        "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/PortfolioData/cc3_Avoidable%20mortality%20in%20England%20and%20Wales%20%E2%80%93%20children%20and%20young%20people.csv",
+        "format": {
+            "type": "csv"
+        }
+    },
+    "mark": {
+        "type": "line",
+        "color": "darkred",
+        "strokeWidth": 2,
+        "point": {
+            "filled": false,
+            "fill": "white",
+            "stroke": "black",
+            "size": 10
+        }
+    },
+    "encoding": {
+        "x": {
+            "field": "Year",
+            "type": "ordinal",
+            "axis": {
+                "title": "",
+                "titleColor": "#122B39",
+                "grid": false,
+                "labelAngle": 45
+            }
+        },
+        "y": {
+            "field": "Ndeaths_Pregnancy_childbirth_perinatal",
+            "type": "quantitative",
+            "axis": {
+                "title": "Number of deaths",
+                "titleColor": "#122B39",
+                "grid": false
+            }
+        },
+        "tooltip": [
+            {"field": "Year", "type": "ordinal", "title": "Year"},
+            {
+                "field": "Ndeaths_Pregnancy_childbirth_perinatal",
+                "type": "quantitative",
+                "title": "Number of deaths"
+            }
+        ]
+    }
+}
