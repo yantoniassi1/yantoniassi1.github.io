@@ -1,0 +1,100 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Doria Leads in the Polls",
+    "anchor": "start",
+    "fontSize": 16,
+    "color": "black"
+  },
+  "width": 500,
+  "height": 300,
+  "data": {
+    "values": [
+      {"candidate": "DORIA (PSDB)", "value": 22, "fakeValue": 90, "color": "#FF0000"},
+      {"candidate": "SKAF (MDB)", "value": 15, "fakeValue": 75, "color": "#004D40"},
+      {"candidate": "LUIZ MARINHO (PT)", "value": 4, "fakeValue": 40, "color": "#FFCC00"},
+      {"candidate": "MARCIO FRANÇA (PSB)", "value": 3, "fakeValue": 30, "color": "#F57F17"},
+      {"candidate": "RODRIGO TAVARES (PN)", "value": 2, "fakeValue": 20, "color": "#FF5722"},
+      {"candidate": "LISETE ARCELARO (PSOL)", "value": 2, "fakeValue": 20, "color": "#00ACC1"},
+      {"candidate": "ROGÉRIO CHEQUER (REDE)", "value": 1, "fakeValue": 10, "color": "#8E24AA"},
+      {"candidate": "BRANCO/NULO", "value": 40, "fakeValue": 40, "color": "#FFC107"},
+      {"candidate": "NÃO SABE", "value": 10, "fakeValue": 10, "color": "#90A4AE"}
+    ]
+  },
+  "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "x": {
+          "field": "candidate",
+          "type": "ordinal",
+          "sort": [
+            "DORIA (PSDB)",
+            "SKAF (MDB)",
+            "LUIZ MARINHO (PT)",
+            "MARCIO FRANÇA (PSB)",
+            "RODRIGO TAVARES (PN)",
+            "LISETE ARCELARO (PSOL)",
+            "ROGÉRIO CHEQUER (REDE)",
+            "BRANCO/NULO",
+            "NÃO SABE"
+          ],
+          "axis": {
+            "labelAngle": -25,
+            "labelFontSize": 10,
+            "labelColor": "black"
+          }
+        },
+        "y": {
+          "field": "fakeValue",
+          "type": "quantitative",
+          "axis": {
+            "grid": true,
+            "title": null
+          }
+        },
+        "color": {
+          "field": "color",
+          "type": "nominal",
+          "scale": null
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "dy": -5
+      },
+      "encoding": {
+        "x": {
+          "field": "candidate",
+          "type": "ordinal",
+          "sort": [
+            "DORIA (PSDB)",
+            "SKAF (MDB)",
+            "LUIZ MARINHO (PT)",
+            "MARCIO FRANÇA (PSB)",
+            "RODRIGO TAVARES (PN)",
+            "LISETE ARCELARO (PSOL)",
+            "ROGÉRIO CHEQUER (REDE)",
+            "BRANCO/NULO",
+            "NÃO SABE"
+          ]
+        },
+        "y": {
+          "field": "fakeValue",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "value",
+          "type": "quantitative",
+          "format": ".0f"
+        },
+        "color": {
+          "value": "black"
+        }
+      }
+    }
+  ]
+}

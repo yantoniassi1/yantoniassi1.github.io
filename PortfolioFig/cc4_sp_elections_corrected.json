@@ -1,0 +1,90 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "São Paulo Governor Poll Results",
+    "subtitle": "2018 State Elections (Preliminary Results, May)",
+    "anchor": "start",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "font": "Helvetica Neue",
+    "subtitleFont": "Helvetica Neue",
+    "color": "black"
+  },
+  "width": 500,
+  "height": 300,
+  "data": {
+    "values": [
+      {"candidate": "DORIA (PSDB)", "value": 22},
+      {"candidate": "SKAF (MDB)", "value": 15},
+      {"candidate": "LUIZ MARINHO (PT)", "value": 4},
+      {"candidate": "MARCIO FRANÇA (PSB)", "value": 3},
+      {"candidate": "RODRIGO TAVARES (PN)", "value": 2},
+      {"candidate": "LISETE ARCELARO (PSOL)", "value": 2},
+      {"candidate": "ROGÉRIO CHEQUER (REDE)", "value": 1},
+      {"candidate": "BRANCO/NULO", "value": 40},
+      {"candidate": "NÃO SABE", "value": 10}
+    ]
+  },
+  "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "x": {
+          "field": "candidate",
+          "type": "ordinal",
+          "sort": "-y",
+          "axis": {
+            "labelAngle": -25,
+            "labelFontSize": 10,
+            "labelFont": "Helvetica Neue",
+            "labelColor": "black",
+            "title": null
+          }
+        },
+        "y": {
+          "field": "value",
+          "type": "quantitative",
+          "scale": {
+            "domain": [0, 50]
+          },
+          "axis": {
+            "grid": true,
+            "title": "Percentage",
+            "titleFont": "Helvetica Neue",
+            "titleFontSize": 12,
+            "labelFont": "Helvetica Neue"
+          }
+        },
+        "color": {
+          "value": "#6a994e"  
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "dy": -5
+      },
+      "encoding": {
+        "x": {
+          "field": "candidate",
+          "type": "ordinal",
+          "sort": "-y"
+        },
+        "y": {
+          "field": "value",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "value",
+          "type": "quantitative",
+          "format": ".0f"
+        },
+        "color": {
+          "value": "black"
+        }
+      }
+    }
+  ]
+}
