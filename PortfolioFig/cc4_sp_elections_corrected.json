@@ -21,8 +21,8 @@
       {"candidate": "RODRIGO TAVARES (PN)", "value": 2},
       {"candidate": "LISETE ARCELARO (PSOL)", "value": 2},
       {"candidate": "ROGÉRIO CHEQUER (REDE)", "value": 1},
-      {"candidate": "BRANCO/NULO", "value": 40},
-      {"candidate": "NÃO SABE", "value": 10}
+      {"candidate": "BLANK/NULL", "value": 40},
+      {"candidate": "UNSURE", "value": 10}
     ]
   },
   "layer": [

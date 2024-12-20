@@ -17,8 +17,8 @@
       {"candidate": "RODRIGO TAVARES (PN)", "value": 2, "fakeValue": 20, "color": "#FF5722"},
       {"candidate": "LISETE ARCELARO (PSOL)", "value": 2, "fakeValue": 20, "color": "#00ACC1"},
       {"candidate": "ROGÉRIO CHEQUER (REDE)", "value": 1, "fakeValue": 10, "color": "#8E24AA"},
-      {"candidate": "BRANCO/NULO", "value": 40, "fakeValue": 40, "color": "#FFC107"},
-      {"candidate": "NÃO SABE", "value": 10, "fakeValue": 10, "color": "#90A4AE"}
+      {"candidate": "BLANK/NULL", "value": 40, "fakeValue": 40, "color": "#FFC107"},
+      {"candidate": "UNSURE", "value": 10, "fakeValue": 10, "color": "#90A4AE"}
     ]
   },
   "layer": [
@@ -36,8 +36,8 @@
             "RODRIGO TAVARES (PN)",
             "LISETE ARCELARO (PSOL)",
             "ROGÉRIO CHEQUER (REDE)",
-            "BRANCO/NULO",
-            "NÃO SABE"
+            "BLANK/NULL",
+            "UNSURE"
           ],
           "axis": {
             "labelAngle": -25,
