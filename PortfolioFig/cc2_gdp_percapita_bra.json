@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
-      "text": "GDP per capita",
+      "text": "GDP per capita in Brazil",
       "anchor": "start",
       "subtitle": "Source: IBGE ",
       "fontSize": "14",
