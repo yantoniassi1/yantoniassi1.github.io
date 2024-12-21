@@ -1,6 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Map of districts from SIRGAS dataset",
+  "title": {
+    "text": "Districts of São Paulo, Brazil",
+    "fontSize": 12,
+    "anchor": "start"
+  },
   "width": 400,
   "height": 400,
   "projection": {

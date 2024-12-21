@@ -1,8 +1,13 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "District map with health facilities points overlay",
-    "width": 800,
-    "height": 600,
+    "title": {
+      "text": "Large-Scale Health Facilities By Management Type in São Paulo",
+      "fontSize": 12,
+      "anchor": "start"
+    },
+    "width": 400,
+    "height": 400,
     "projection": {
       "type": "mercator"
     },
@@ -31,21 +36,35 @@
         "data": {
           "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/ProjectData/loc_healthfacilities.json",
           "format": {
-            "type": "json"
+            "type": "json",
+            "property": "features"
           }
         },
+        "transform": [
+          {"filter": "datum.properties.DEPADM !== 'Federal'"}
+        ],
         "mark": {
           "type": "circle",
           "size": 50,
-          "color": "red",
           "opacity": 0.7
         },
         "encoding": {
-          "longitude": {"field": "longitude", "type": "quantitative"},
-          "latitude": {"field": "latitude", "type": "quantitative"},
+          "longitude": {"field": "geometry.coordinates[0]", "type": "quantitative"},
+          "latitude": {"field": "geometry.coordinates[1]", "type": "quantitative"},
+          "color": {
+            "field": "properties.DEPADM",
+            "type": "nominal",
+            "scale": {
+              "domain": ["Municipal", "Privado", "Estadual"],
+              "range": ["#1f77b4", "#ff7f0e", "#9e0059"]
+            },
+            "legend": {
+              "title": "Management Type",
+              "labelExpr": "datum.label === 'Municipal' ? 'Municipal' : datum.label === 'Privado' ? 'Private' : 'State'"
+            }
+          },
           "tooltip": [
-            {"field": "facility_name", "type": "nominal", "title": "Facility Name"},
-            {"field": "type", "type": "nominal", "title": "Facility Type"}
+            {"field": "properties.ESTAB_SA", "type": "nominal", "title": "Facility Name"}
           ]
         }
       }
