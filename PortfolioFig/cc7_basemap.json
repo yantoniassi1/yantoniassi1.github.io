@@ -1,0 +1,34 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Map of districts from SIRGAS dataset",
+  "width": 800,
+  "height": 600,
+  "data": {
+    "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/ProjectData/SIRGAS_SHP_distrito.json",
+    "format": {
+      "type": "json",
+      "property": "features"
+    }
+  },
+  "mark": {
+    "type": "geoshape",
+    "stroke": "black",
+    "strokeWidth": 0.5
+  },
+  "encoding": {
+    "color": {
+      "field": "ds_sigla",
+      "type": "nominal",
+      "legend": {"title": "District Abbreviation"}
+    },
+    "tooltip": [
+      {"field": "ds_nome", "type": "nominal", "title": "District Name"},
+      {"field": "ds_areakm", "type": "quantitative", "title": "Area (km²)"}
+    ]
+  },
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    }
+  }
+}
