@@ -1,0 +1,59 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "District map with health facilities points overlay",
+    "width": 800,
+    "height": 600,
+    "projection": {
+      "type": "mercator"
+    },
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/ProjectData/SIRGAS_SHP_districts.json",
+          "format": {
+            "type": "json",
+            "property": "features"
+          }
+        },
+        "mark": {
+          "type": "geoshape",
+          "stroke": "black",
+          "strokeWidth": 0.5,
+          "fill": "#f5f5dc"
+        },
+        "encoding": {
+          "tooltip": [
+            {"field": "properties.ds_nome", "type": "nominal", "title": "District Name"}
+          ]
+        }
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/ProjectData/loc_healthfacilities.json",
+          "format": {
+            "type": "json"
+          }
+        },
+        "mark": {
+          "type": "circle",
+          "size": 50,
+          "color": "red",
+          "opacity": 0.7
+        },
+        "encoding": {
+          "longitude": {"field": "longitude", "type": "quantitative"},
+          "latitude": {"field": "latitude", "type": "quantitative"},
+          "tooltip": [
+            {"field": "facility_name", "type": "nominal", "title": "Facility Name"},
+            {"field": "type", "type": "nominal", "title": "Facility Type"}
+          ]
+        }
+      }
+    ],
+    "config": {
+      "view": {
+        "stroke": "transparent"
+      }
+    }
+  }
+  
