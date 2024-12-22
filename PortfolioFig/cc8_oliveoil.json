@@ -1,0 +1,58 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Monthly Median Olive Oil Price Over Time",
+    "title": {
+      "text": "Monthly Median Olive Oil Price in the UK Over Time",
+      "fontSize": 12,
+      "anchor": "start"
+    },
+    "width": 600,
+    "height": 300,
+    "data": {
+      "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/PortfolioData/ukprices_oil_db.csv"
+    },
+    "transform": [
+      {
+        "filter": "datum.item_type === 'Olive Oil'"
+      }
+    ],
+    "mark": {
+      "type": "line",
+      "interpolate": "linear",
+      "tooltip": true,
+      "color": "#06c277"
+    },
+    "encoding": {
+      "x": {
+        "field": "year_month",
+        "type": "temporal",
+        "title": null,
+        "axis": {
+          "labelAngle": 45,
+          "format": "%Y-%m"
+        }
+      },
+      "y": {
+        "field": "price",
+        "type": "quantitative",
+        "title": "Median Price (£)",
+        "axis": {
+          "labelExpr": "'£' + datum.value"
+        }
+      },
+      "tooltip": [
+        {"field": "year_month", "type": "temporal", "title": "Year-Month", "format": "%Y-%m"},
+        {"field": "price", "type": "quantitative", "title": "Median Price (£)"}
+      ]
+    },
+    "config": {
+      "axis": {
+        "grid": true
+      },
+      "view": {
+        "stroke": "transparent"
+      }
+    }
+  }
+  
+  
