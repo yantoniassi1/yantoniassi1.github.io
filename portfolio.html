@@ -155,11 +155,18 @@
 
     <!-------- CODING CHALLENGE 9 ------------->
     <section>
-        <h3> Coding Challenge 9: Bubble Plot </h3>
+        <h3> Coding Challenge 9: Analytics Charts </h3>
         <p> 
-            The bubble plot below displays the relationship between GDP per capita, life expectancy, and population size for 10 countries.
+            The analytics charts chosen were a bubble plot, displaying the relationship between healthcare expenditure per person and deaths per 100,000 people Brazilian Municipalities, sized by population.
+            It shows a counterintuitive slightly positive correlation between healthcare expenditure and deaths, with a few outliers. It showscases the importance of considering other factors when analyzing healthcare outcomes and can indicate the money is not being spent efficiently.
         </p>
         <figure id="Location15"></figure>
+
+    </section>
+        <p> 
+            The second analytics charts chosen was a histogram distribution, displaying the distribution of healthcare expenditure per person in Brazilian Municipalities.
+        </p>
+        <figure id="Location16"></figure>
         
     <script>
 
@@ -177,6 +184,7 @@
         let figure_13_spec = "PortfolioFig/cc8_oliveoil.json"
         let figure_14_spec = "PortfolioFig/cc8_butter.json"
         let figure_15_spec = "PortfolioFig/cc9_bubbleplot.json"
+        let figure_16_spec = "PortfolioFig/cc9_distribution.json"
         
 
         vegaEmbed('#Location1', figure_1_spec) 
@@ -193,6 +201,7 @@
         vegaEmbed("#Location13", figure_13_spec)
         vegaEmbed("#Location14", figure_14_spec)
         vegaEmbed("#Location15", figure_15_spec)
+        vegaEmbed("#Location16", figure_16_spec)
         
     </script>
 

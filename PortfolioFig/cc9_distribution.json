@@ -1,0 +1,47 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Distribution of Municipal Health Expenditure per Capita (R$)",
+    "title": {
+      "text": "Distribution of Municipal Health Expenditure per Capita (R$)",
+      "fontSize": 14,
+      "anchor": "start"
+    },
+    "width": 600,
+    "height": 400,
+    "data": {
+      "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/PortfolioData/cc9_health_cities_brazil.csv"
+    },
+    "transform": [
+      {
+        "filter": "datum.desp_tot_saude_pc_mun != null"
+      },
+      {
+        "calculate": "parseFloat(datum.desp_tot_saude_pc_mun)",
+        "as": "desp_tot_saude_pc_mun"
+      }
+    ],
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "desp_tot_saude_pc_mun",
+        "type": "quantitative",
+        "bin": {"maxbins": 30},
+        "title": "Health Expenditure (R$ per person)"
+      },
+      "y": {
+        "aggregate": "count",
+        "title": "Number of Municipalities"
+      },
+      "color": {
+        "value": "#4cc9f0"
+      }
+    },
+    "config": {
+      "view": {"stroke": "transparent"},
+      "axis": {
+        "grid": true
+      }
+    }
+  }
+  
+  
