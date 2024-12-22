@@ -1,0 +1,66 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Top 10 Main Topics Discussed in UN News",
+    "title": {
+        "text": "Top 10 Main Topics Discussed in UN News",
+        "fontSize": 12,
+        "anchor": "start"
+      },
+    "width": 400,
+    "height": 300,
+    "data": {
+      "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/PortfolioData/db_un_news.csv"
+    },
+    "transform": [
+      {
+        "filter": "datum.Topic != ''"
+      },
+      {
+        "aggregate": [
+          {"op": "count", "field": "Title", "as": "Number_of_Articles"}
+        ],
+        "groupby": ["Topic"]
+      },
+      {
+        "window": [
+          {"op": "rank", "as": "rank"}
+        ],
+        "sort": [
+          {"field": "Number_of_Articles", "order": "descending"}
+        ]
+      },
+      {
+        "filter": "datum.rank <= 10"
+      }
+    ],
+    "mark": {
+      "type": "bar",
+      "color": "#219ebc"
+    },
+    "encoding": {
+      "y": {
+        "field": "Topic",
+        "type": "ordinal",
+        "sort": "-x",
+        "title": "Topics"
+      },
+      "x": {
+        "field": "Number_of_Articles",
+        "type": "quantitative",
+        "title": "Number of Articles"
+      },
+      "tooltip": [
+        {"field": "Topic", "type": "ordinal", "title": "Topic"},
+        {"field": "Number_of_Articles", "type": "quantitative", "title": "Number of Articles"}
+      ]
+    },
+    "config": {
+      "axis": {
+        "labelAngle": 0
+      },
+      "view": {
+        "stroke": "transparent"
+      }
+    }
+  }
+  
