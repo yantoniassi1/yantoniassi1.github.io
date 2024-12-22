@@ -1,0 +1,110 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "100% Horizontal Stacked Bar Chart for Vaccination Coverage with Year Slider",
+  "title": {
+    "text": "Vaccination Coverage in Brazil by Vaccine Type",
+    "fontSize": 16,
+    "anchor": "start"
+  },
+  "width": 500,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/PortfolioData/cc10_vaccines.csv"
+  },
+  "transform": [
+    {
+      "fold": [
+        "cob_vac_bcg",
+        "cob_vac_rota",
+        "cob_vac_menin",
+        "cob_vac_pneumo",
+        "cob_vac_polio",
+        "cob_vac_tvd1",
+        "cob_vac_penta",
+        "cob_vac_hepb",
+        "cob_vac_hepa"
+      ],
+      "as": ["vaccine", "coverage"]
+    },
+    {
+      "calculate": "datum.vaccine === 'cob_vac_bcg' ? 'BCG Vaccine' : datum.vaccine === 'cob_vac_rota' ? 'Rotavirus Vaccine' : datum.vaccine === 'cob_vac_menin' ? 'Meningococcal Vaccine' : datum.vaccine === 'cob_vac_pneumo' ? 'Pneumococcal Vaccine' : datum.vaccine === 'cob_vac_polio' ? 'Polio Vaccine' : datum.vaccine === 'cob_vac_tvd1' ? 'DTP Vaccine' : datum.vaccine === 'cob_vac_penta' ? 'Pentavalent Vaccine' : datum.vaccine === 'cob_vac_hepb' ? 'Hepatitis B Vaccine' : datum.vaccine === 'cob_vac_hepa' ? 'Hepatitis A Vaccine' : 'Unknown'",
+      "as": "vaccine_english"
+    },
+    {
+      "filter": "year(datum.ano) == yearSelector"
+    },
+    {
+      "calculate": "datum.coverage",
+      "as": "vaccinated"
+    },
+    {
+      "calculate": "100 - datum.coverage",
+      "as": "unvaccinated"
+    },
+    {
+      "fold": ["unvaccinated", "vaccinated"],
+      "as": ["status", "percentage"]
+    }
+  ],
+  "params": [
+    {
+      "name": "yearSelector",
+      "value": 2013,
+      "bind": {
+        "input": "range",
+        "min": 2013,
+        "max": 2022,
+        "step": 1,
+        "name": "Select Year: "
+      }
+    }
+  ],
+  "mark": {
+    "type": "bar",
+    "cornerRadiusTopLeft": 4,
+    "cornerRadiusTopRight": 4
+  },
+  "encoding": {
+    "y": {
+      "field": "vaccine_english",
+      "type": "nominal",
+      "title": "Vaccine Type",
+      "axis": {
+        "labelAngle": 0
+      }
+    },
+    "x": {
+      "field": "percentage",
+      "type": "quantitative",
+      "title": "Percentage (%)",
+      "stack": "normalize"
+    },
+    "color": {
+      "field": "status",
+      "type": "nominal",
+      "title": "Status",
+      "scale": {
+        "domain": ["vaccinated", "unvaccinated"],
+        "range": ["#6a994e", "#bc4749"]
+      },
+      "legend": {
+        "orient": "right",
+        "title": "Vaccination Status"
+      }
+    },
+    "tooltip": [
+      {"field": "ano", "type": "temporal", "title": "Year", "format": "%Y"},
+      {"field": "vaccine_english", "type": "nominal", "title": "Vaccine Type"},
+      {"field": "status", "type": "nominal", "title": "Status"},
+      {"field": "percentage", "type": "quantitative", "title": "Percentage (%)"}
+    ]
+  },
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    },
+    "axis": {
+      "grid": true
+    }
+  }
+}
