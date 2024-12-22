@@ -2,25 +2,25 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "Monthly Median Olive Oil Price Over Time",
     "title": {
-      "text": "Monthly Median Cooking Oil Price in the UK Over Time",
+      "text": "Monthly Median Butter Price in the UK Over Time",
       "fontSize": 12,
       "anchor": "start"
     },
-    "width": 900,
-    "height": 300,
+    "width": 400,
+    "height": 200,
     "data": {
-      "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/PortfolioData/ukprices_oil_db.csv"
+      "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/PortfolioData/oil_butter_db.csv"
     },
     "transform": [
       {
-        "filter": "datum.item_type === 'Cooking Oil'"
+        "filter": "datum.item_type === 'Butter'"
       }
     ],
     "mark": {
       "type": "line",
       "interpolate": "linear",
       "tooltip": true,
-      "color": "#e7e014"
+      "color": "#e2d006"
     },
     "encoding": {
       "x": {

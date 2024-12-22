@@ -6,10 +6,10 @@
       "fontSize": 12,
       "anchor": "start"
     },
-    "width": 600,
-    "height": 300,
+    "width": 400,
+    "height": 200,
     "data": {
-      "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/PortfolioData/ukprices_oil_db.csv"
+      "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/PortfolioData/oil_butter_db.csv"
     },
     "transform": [
       {
