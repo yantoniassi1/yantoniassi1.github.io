@@ -3,10 +3,10 @@
   "description": "100% Horizontal Stacked Bar Chart for Vaccination Coverage with Year Slider",
   "title": {
     "text": "Vaccination Coverage in Brazil by Vaccine Type",
-    "fontSize": 16,
+    "fontSize": 14,
     "anchor": "start"
   },
-  "width": 500,
+  "width": 400,
   "height": 300,
   "data": {
     "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/PortfolioData/cc10_vaccines.csv"
