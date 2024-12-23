@@ -1,0 +1,90 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Interactive map of Brazil showing vaccination coverage by selected vaccine type",
+  "title": {
+    "text": "Vaccination Coverage in 2023 by State in Brazil",
+    "fontSize": 16,
+    "anchor": "start"
+  },
+  "width": 500,
+  "height": 500,
+  "projection": {
+    "type": "mercator"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/PortfolioData/cc10_db_vac_map.geojson",
+    "format": {
+      "type": "json",
+      "property": "features"
+    }
+  },
+  "params": [
+    {
+      "name": "selected_vaccine",
+      "value": "cob_vac_bcg",
+      "bind": {
+        "input": "select",
+        "options": [
+          "cob_vac_bcg",
+          "cob_vac_rota",
+          "cob_vac_menin",
+          "cob_vac_pneumo",
+          "cob_vac_polio",
+          "cob_vac_tvd1",
+          "cob_vac_penta",
+          "cob_vac_hepb",
+          "cob_vac_hepa"
+        ],
+        "labels": [
+          "BCG Vaccine",
+          "Rotavirus Vaccine",
+          "Meningococcal Vaccine",
+          "Pneumococcal Vaccine",
+          "Polio Vaccine",
+          "DTP Vaccine",
+          "Pentavalent Vaccine",
+          "Hepatitis B Vaccine",
+          "Hepatitis A Vaccine"
+        ],
+        "name": "Select Vaccine Type:"
+      }
+    }
+  ],
+  "transform": [
+    {
+      "calculate": "datum.properties[selected_vaccine]",
+      "as": "selected_vaccine_value"
+    }
+  ],
+  "mark": {
+    "type": "geoshape",
+    "stroke": "white",
+    "strokeWidth": 0.5
+  },
+  "encoding": {
+    "color": {
+    "field": "selected_vaccine_value",
+    "type": "quantitative",
+    "title": "Coverage (%)",
+    "scale": {
+      "scheme": "reds",
+      "domain": [40, 100],
+      "reverse": true
+    }
+  },
+  "tooltip": [
+      {"field": "properties.NM_UF", "type": "nominal", "title": "State"},
+      {"field": "selected_vaccine_value", "type": "quantitative", "title": "Coverage (%)", "format": ".2f"}
+]
+
+  },
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    },
+    "legend": {
+      "titleFontSize": 12,
+      "labelFontSize": 10
+    }
+  }
+}
