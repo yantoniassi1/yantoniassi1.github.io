@@ -1,9 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Health Expenditure Per Capita by State in Brazil (2023)",
+    "text": "Health Expenditure Per Capita by State in Brazil (2010-2023)",
     "anchor": "start",
+    "subtitle": ["Data Source: Your Dataset"],
     "fontSize": 16,
+    "subtitleFontSize": 12,
     "fontWeight": "bold"
   },
   "width": 500,
@@ -11,14 +13,24 @@
   "projection": {
     "type": "mercator"
   },
+  "params": [
+    {
+      "name": "year",
+      "value": 2010,
+      "bind": {
+        "input": "range",
+        "min": 2010,
+        "max": 2023,
+        "step": 1,
+        "name": "Select Year:"
+      }
+    }
+  ],
   "data": {
     "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/ProjectData/yearly_hexp_UF.csv",
     "format": {"type": "csv"}
   },
   "transform": [
-    {
-      "filter": "datum.year == 2023"
-    },
     {
       "lookup": "CD_UF",
       "from": {
@@ -29,6 +41,9 @@
         "key": "properties.CD_UF",
         "fields": ["type", "properties", "geometry"]
       }
+    },
+    {
+      "filter": "datum.year == year"
     }
   ],
   "mark": {
@@ -38,11 +53,16 @@
   },
   "encoding": {
     "color": {
-      "field": "desp_tot_saude_pc_mun",
-      "type": "quantitative",
-      "title": "Health Expenditure (per capita)",
-      "scale": {"scheme": "blues"}
-    },
+    "field": "desp_tot_saude_pc_mun",
+    "type": "quantitative",
+    "title": "Health Expenditure (R$ per capita)",
+    "scale": {
+      "domain": [200, 600, 1000, 1200, 1400, 1600], 
+      "range": ["#FDE0C5", "#F57A5D", "#D1476A", "#972A82", "#5E1E74", "#2A144E", "#000000"]
+      },
+    "legend": {
+    }
+},
     "tooltip": [
       {"field": "properties.NM_UF", "type": "nominal", "title": "State"},
       {
@@ -61,4 +81,3 @@
     }
   }
 }
-
