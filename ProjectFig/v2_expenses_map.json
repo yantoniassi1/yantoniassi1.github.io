@@ -1,11 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Health Expenditure Per Capita by State in Brazil (2010-2023)",
+    "text": "Health Expenditure Per Capita by State in Brazil (2023)",
     "anchor": "start",
-    "subtitle": ["Data Source: Your Dataset"],
     "fontSize": 16,
-    "subtitleFontSize": 12,
     "fontWeight": "bold"
   },
   "width": 500,
@@ -13,24 +11,14 @@
   "projection": {
     "type": "mercator"
   },
-  "params": [
-    {
-      "name": "year",
-      "value": 2010,
-      "bind": {
-        "input": "range",
-        "min": 2010,
-        "max": 2023,
-        "step": 1,
-        "name": "Select Year:"
-      }
-    }
-  ],
   "data": {
     "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/ProjectData/yearly_hexp_UF.csv",
     "format": {"type": "csv"}
   },
   "transform": [
+    {
+      "filter": "datum.year == 2023"
+    },
     {
       "lookup": "CD_UF",
       "from": {
@@ -41,9 +29,6 @@
         "key": "properties.CD_UF",
         "fields": ["type", "properties", "geometry"]
       }
-    },
-    {
-      "filter": "datum.year == year"
     }
   ],
   "mark": {
