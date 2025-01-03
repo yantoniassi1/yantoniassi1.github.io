@@ -1,0 +1,78 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Interactive choropleth map of Brazil showing health expenditure per capita by state and year",
+  "title": {
+    "text": "Health Expenditure Per Capita by State in Brazil (2010-2023)",
+    "fontSize": 16,
+    "anchor": "start"
+  },
+  "width": 500,
+  "height": 500,
+  "projection": {
+    "type": "mercator"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/ProjectData/hexp_UF_unique.geojson",
+    "format": {
+      "type": "json",
+      "property": "features"
+    }
+  },
+  "params": [
+    {
+      "name": "selected_year",
+      "value": 2010,
+      "bind": {
+        "input": "range",
+        "min": 2010,
+        "max": 2023,
+        "step": 1,
+        "name": "Select Year:"
+      }
+    }
+  ],
+  "transform": [
+    {
+      "lookup": "properties.CD_UF",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/ProjectData/yearly_hexp_UF.csv"
+        },
+        "key": "CD_UF",
+        "fields": ["ano", "desp_tot_saude_pc_mun"]
+      },
+      "as": ["year", "desp_tot_saude_pc_mun"]
+    },
+    {
+      "filter": "datum.year == selected_year"
+    }
+  ],
+  "mark": {
+    "type": "geoshape",
+    "stroke": "white",
+    "strokeWidth": 0.5
+  },
+  "encoding": {
+    "color": {
+      "field": "desp_tot_saude_pc_mun",
+      "type": "quantitative",
+      "title": "Health Expenditure (per capita)",
+      "scale": {
+        "scheme": "blues"
+      }
+    },
+    "tooltip": [
+      {"field": "properties.NM_UF", "type": "nominal", "title": "State"},
+      {"field": "desp_tot_saude_pc_mun", "type": "quantitative", "title": "Expenditure (R$)", "format": ".2f"}
+    ]
+  },
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    },
+    "legend": {
+      "titleFontSize": 12,
+      "labelFontSize": 10
+    }
+  }
+}
