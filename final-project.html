@@ -7,18 +7,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Project</title>
+
+            <!-- This is a link to the vega-lite which we're using to make graphs -->
+            <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+            <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+            <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+        
+            <style>
+                #chartGrid {
+                    display: flex;
+                }
+                
+            </style>
 </head>
 
 <body>
     <header>
-        <h1>Yara Antoniassi's Final Project</h1>
+        <h2> More Money, Better Health? The Efficiency Puzzle of Healthcare Spending in Brazil</h2>
         <nav>
             <a href="index.html">Home</a> 
         </nav>
     </header>
-    <main>
-        <h2>Healthcare Access In São Paulo</h2>
-    </main>
+
+<section>
+    <p>
+        This graph shows the unemployment rate in São Paulo from 2012 to 2020.
+    </p>
+    <figure id="Location1"></figure> 
+</section>
+
+
+<script>
+    let figure_1_spec = "PortfolioFig/cc1_unemployment.json"      
+    vegaEmbed('#Location1', figure_1_spec) 
+    
+</script>
 
 </body>
 
