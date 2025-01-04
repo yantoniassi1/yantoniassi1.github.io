@@ -54,7 +54,7 @@ CD_UF,NAME_UF,Expense_Type,Value,Group
 51,Mato Grosso,Diagnosis by endoscopy,0.0,Diagnostic Procedures
 52,Goiás,Diagnosis by endoscopy,14790.21,Diagnostic Procedures
 53,Distrito Federal,Diagnosis by endoscopy,33180.15,Diagnostic Procedures
-Total,,Diagnosis by endoscopy,25895011.17,Diagnostic Procedures
+Total,Brazil (total),Diagnosis by endoscopy,25895011.17,Diagnostic Procedures
 11,Rondônia,Diagnostic methods in specialties,0.0,Diagnostic Procedures
 12,Acre,Diagnostic methods in specialties,0.0,Diagnostic Procedures
 13,Amazonas,Diagnostic methods in specialties,340.0,Diagnostic Procedures
@@ -82,7 +82,7 @@ Total,,Diagnosis by endoscopy,25895011.17,Diagnostic Procedures
 51,Mato Grosso,Diagnostic methods in specialties,0.0,Diagnostic Procedures
 52,Goiás,Diagnostic methods in specialties,220243.67,Diagnostic Procedures
 53,Distrito Federal,Diagnostic methods in specialties,0.0,Diagnostic Procedures
-Total,,Diagnostic methods in specialties,5169559.03,Diagnostic Procedures
+Total,Brazil (total),Diagnostic methods in specialties,5169559.03,Diagnostic Procedures
 11,Rondônia,Consultations / Appointments / Follow-ups,341053.9,Clinical Procedures
 12,Acre,Consultations / Appointments / Follow-ups,415162.38,Clinical Procedures
 13,Amazonas,Consultations / Appointments / Follow-ups,487635.14,Clinical Procedures
@@ -110,7 +110,7 @@ Total,,Diagnostic methods in specialties,5169559.03,Diagnostic Procedures
 51,Mato Grosso,Consultations / Appointments / Follow-ups,431488.58,Clinical Procedures
 52,Goiás,Consultations / Appointments / Follow-ups,2759844.0,Clinical Procedures
 53,Distrito Federal,Consultations / Appointments / Follow-ups,1477379.95,Clinical Procedures
-Total,,Consultations / Appointments / Follow-ups,64750433.53,Clinical Procedures
+Total,Brazil (total),Consultations / Appointments / Follow-ups,64750433.53,Clinical Procedures
 11,Rondônia,Clinical treatments (other specialties),64545179.76,Clinical Procedures
 12,Acre,Clinical treatments (other specialties),18740078.39,Clinical Procedures
 13,Amazonas,Clinical treatments (other specialties),100550597.79,Clinical Procedures
@@ -138,7 +138,7 @@ Total,,Consultations / Appointments / Follow-ups,64750433.53,Clinical Procedures
 51,Mato Grosso,Clinical treatments (other specialties),105280542.33,Clinical Procedures
 52,Goiás,Clinical treatments (other specialties),216000207.31,Clinical Procedures
 53,Distrito Federal,Clinical treatments (other specialties),133146627.52,Clinical Procedures
-Total,,Clinical treatments (other specialties),7409910754.92,Clinical Procedures
+Total,Brazil (total),Clinical treatments (other specialties),7409910754.92,Clinical Procedures
 11,Rondônia,Oncology treatment,2948448.98,Clinical Procedures
 12,Acre,Oncology treatment,450738.36,Clinical Procedures
 13,Amazonas,Oncology treatment,2453706.18,Clinical Procedures
@@ -166,7 +166,7 @@ Total,,Clinical treatments (other specialties),7409910754.92,Clinical Procedures
 51,Mato Grosso,Oncology treatment,4703357.24,Clinical Procedures
 52,Goiás,Oncology treatment,6886198.76,Clinical Procedures
 53,Distrito Federal,Oncology treatment,8932495.76,Clinical Procedures
-Total,,Oncology treatment,459610429.56,Clinical Procedures
+Total,Brazil (total),Oncology treatment,459610429.56,Clinical Procedures
 11,Rondônia,Nephrology treatment,2983581.3,Clinical Procedures
 12,Acre,Nephrology treatment,808129.7,Clinical Procedures
 13,Amazonas,Nephrology treatment,5091888.27,Clinical Procedures
@@ -194,7 +194,7 @@ Total,,Oncology treatment,459610429.56,Clinical Procedures
 51,Mato Grosso,Nephrology treatment,5846293.03,Clinical Procedures
 52,Goiás,Nephrology treatment,10716922.12,Clinical Procedures
 53,Distrito Federal,Nephrology treatment,9801932.15,Clinical Procedures
-Total,,Nephrology treatment,407727303.8,Clinical Procedures
+Total,Brazil (total),Nephrology treatment,407727303.8,Clinical Procedures
 11,Rondônia,"Treatment of injuries, poisoning, and others resulting from external causes",3783205.82,Clinical Procedures
 12,Acre,"Treatment of injuries, poisoning, and others resulting from external causes",742116.24,Clinical Procedures
 13,Amazonas,"Treatment of injuries, poisoning, and others resulting from external causes",2980289.28,Clinical Procedures
@@ -222,7 +222,7 @@ Total,,Nephrology treatment,407727303.8,Clinical Procedures
 51,Mato Grosso,"Treatment of injuries, poisoning, and others resulting from external causes",3790329.64,Clinical Procedures
 52,Goiás,"Treatment of injuries, poisoning, and others resulting from external causes",6303639.48,Clinical Procedures
 53,Distrito Federal,"Treatment of injuries, poisoning, and others resulting from external causes",6574101.12,Clinical Procedures
-Total,,"Treatment of injuries, poisoning, and others resulting from external causes",207060633.61,Clinical Procedures
+Total,Brazil (total),"Treatment of injuries, poisoning, and others resulting from external causes",207060633.61,Clinical Procedures
 11,Rondônia,Childbirth and birth,4053737.26,Clinical Procedures
 12,Acre,Childbirth and birth,3494307.84,Clinical Procedures
 13,Amazonas,Childbirth and birth,18345615.49,Clinical Procedures
@@ -250,7 +250,7 @@ Total,,"Treatment of injuries, poisoning, and others resulting from external cau
 51,Mato Grosso,Childbirth and birth,9136024.4,Clinical Procedures
 52,Goiás,Childbirth and birth,11616895.35,Clinical Procedures
 53,Distrito Federal,Childbirth and birth,10814083.64,Clinical Procedures
-Total,,Childbirth and birth,515130174.16,Clinical Procedures
+Total,Brazil (total),Childbirth and birth,515130174.16,Clinical Procedures
 11,Rondônia,"Minor surgeries and surgeries of skin, subcutaneous tissue, and mucosa",354410.33,Surgical Procedures
 12,Acre,"Minor surgeries and surgeries of skin, subcutaneous tissue, and mucosa",139653.14,Surgical Procedures
 13,Amazonas,"Minor surgeries and surgeries of skin, subcutaneous tissue, and mucosa",283218.59,Surgical Procedures
@@ -278,7 +278,7 @@ Total,,Childbirth and birth,515130174.16,Clinical Procedures
 51,Mato Grosso,"Minor surgeries and surgeries of skin, subcutaneous tissue, and mucosa",612339.61,Surgical Procedures
 52,Goiás,"Minor surgeries and surgeries of skin, subcutaneous tissue, and mucosa",845169.56,Surgical Procedures
 53,Distrito Federal,"Minor surgeries and surgeries of skin, subcutaneous tissue, and mucosa",479137.71,Surgical Procedures
-Total,,"Minor surgeries and surgeries of skin, subcutaneous tissue, and mucosa",49875705.26,Surgical Procedures
+Total,Brazil (total),"Minor surgeries and surgeries of skin, subcutaneous tissue, and mucosa",49875705.26,Surgical Procedures
 11,Rondônia,Endocrine gland surgery,96704.16,Surgical Procedures
 12,Acre,Endocrine gland surgery,85649.25,Surgical Procedures
 13,Amazonas,Endocrine gland surgery,194694.81,Surgical Procedures
@@ -306,7 +306,7 @@ Total,,"Minor surgeries and surgeries of skin, subcutaneous tissue, and mucosa",
 51,Mato Grosso,Endocrine gland surgery,127576.64,Surgical Procedures
 52,Goiás,Endocrine gland surgery,129508.07,Surgical Procedures
 53,Distrito Federal,Endocrine gland surgery,190866.67,Surgical Procedures
-Total,,Endocrine gland surgery,9631533.23,Surgical Procedures
+Total,Brazil (total),Endocrine gland surgery,9631533.23,Surgical Procedures
 11,Rondônia,Central and peripheral nervous system surgery,3570939.67,Surgical Procedures
 12,Acre,Central and peripheral nervous system surgery,1750176.2,Surgical Procedures
 13,Amazonas,Central and peripheral nervous system surgery,4847425.87,Surgical Procedures
@@ -334,7 +334,7 @@ Total,,Endocrine gland surgery,9631533.23,Surgical Procedures
 51,Mato Grosso,Central and peripheral nervous system surgery,4162647.37,Surgical Procedures
 52,Goiás,Central and peripheral nervous system surgery,7961162.38,Surgical Procedures
 53,Distrito Federal,Central and peripheral nervous system surgery,8061006.98,Surgical Procedures
-Total,,Central and peripheral nervous system surgery,369300163.91,Surgical Procedures
+Total,Brazil (total),Central and peripheral nervous system surgery,369300163.91,Surgical Procedures
 11,Rondônia,"Surgery of the upper airways, face, head, and neck",3553643.03,Surgical Procedures
 12,Acre,"Surgery of the upper airways, face, head, and neck",427244.88,Surgical Procedures
 13,Amazonas,"Surgery of the upper airways, face, head, and neck",3534940.45,Surgical Procedures
@@ -362,7 +362,7 @@ Total,,Central and peripheral nervous system surgery,369300163.91,Surgical Proce
 51,Mato Grosso,"Surgery of the upper airways, face, head, and neck",5206020.39,Surgical Procedures
 52,Goiás,"Surgery of the upper airways, face, head, and neck",6789717.35,Surgical Procedures
 53,Distrito Federal,"Surgery of the upper airways, face, head, and neck",3364880.29,Surgical Procedures
-Total,,"Surgery of the upper airways, face, head, and neck",228143661.3,Surgical Procedures
+Total,Brazil (total),"Surgery of the upper airways, face, head, and neck",228143661.3,Surgical Procedures
 11,Rondônia,Surgery of the visual system,84067.37,Surgical Procedures
 12,Acre,Surgery of the visual system,22006.23,Surgical Procedures
 13,Amazonas,Surgery of the visual system,1865593.55,Surgical Procedures
@@ -390,7 +390,7 @@ Total,,"Surgery of the upper airways, face, head, and neck",228143661.3,Surgical
 51,Mato Grosso,Surgery of the visual system,337386.3,Surgical Procedures
 52,Goiás,Surgery of the visual system,9572183.52,Surgical Procedures
 53,Distrito Federal,Surgery of the visual system,3202223.28,Surgical Procedures
-Total,,Surgery of the visual system,225891840.04,Surgical Procedures
+Total,Brazil (total),Surgery of the visual system,225891840.04,Surgical Procedures
 11,Rondônia,Surgery of the circulatory system,3512078.11,Surgical Procedures
 12,Acre,Surgery of the circulatory system,5147515.05,Surgical Procedures
 13,Amazonas,Surgery of the circulatory system,16990669.47,Surgical Procedures
@@ -418,7 +418,7 @@ Total,,Surgery of the visual system,225891840.04,Surgical Procedures
 51,Mato Grosso,Surgery of the circulatory system,20991566.17,Surgical Procedures
 52,Goiás,Surgery of the circulatory system,60403106.76,Surgical Procedures
 53,Distrito Federal,Surgery of the circulatory system,38974535.17,Surgical Procedures
-Total,,Surgery of the circulatory system,2135301556.82,Surgical Procedures
+Total,Brazil (total),Surgery of the circulatory system,2135301556.82,Surgical Procedures
 11,Rondônia,"Surgery of the digestive system, accessory organs, and abdominal wall",8717636.24,Surgical Procedures
 12,Acre,"Surgery of the digestive system, accessory organs, and abdominal wall",6044612.71,Surgical Procedures
 13,Amazonas,"Surgery of the digestive system, accessory organs, and abdominal wall",18946098.88,Surgical Procedures
@@ -446,7 +446,7 @@ Total,,Surgery of the circulatory system,2135301556.82,Surgical Procedures
 51,Mato Grosso,"Surgery of the digestive system, accessory organs, and abdominal wall",18599259.25,Surgical Procedures
 52,Goiás,"Surgery of the digestive system, accessory organs, and abdominal wall",43390599.41,Surgical Procedures
 53,Distrito Federal,"Surgery of the digestive system, accessory organs, and abdominal wall",15104021.18,Surgical Procedures
-Total,,"Surgery of the digestive system, accessory organs, and abdominal wall",1211180433.09,Surgical Procedures
+Total,Brazil (total),"Surgery of the digestive system, accessory organs, and abdominal wall",1211180433.09,Surgical Procedures
 11,Rondônia,Musculoskeletal system surgery,7074377.83,Surgical Procedures
 12,Acre,Musculoskeletal system surgery,4179066.64,Surgical Procedures
 13,Amazonas,Musculoskeletal system surgery,11022950.33,Surgical Procedures
@@ -474,7 +474,7 @@ Total,,"Surgery of the digestive system, accessory organs, and abdominal wall",1
 51,Mato Grosso,Musculoskeletal system surgery,20781666.8,Surgical Procedures
 52,Goiás,Musculoskeletal system surgery,51565502.71,Surgical Procedures
 53,Distrito Federal,Musculoskeletal system surgery,19022852.87,Surgical Procedures
-Total,,Musculoskeletal system surgery,1094554643.71,Surgical Procedures
+Total,Brazil (total),Musculoskeletal system surgery,1094554643.71,Surgical Procedures
 11,Rondônia,Genitourinary system surgery,4733614.19,Surgical Procedures
 12,Acre,Genitourinary system surgery,1835945.2,Surgical Procedures
 13,Amazonas,Genitourinary system surgery,6094849.47,Surgical Procedures
@@ -502,7 +502,7 @@ Total,,Musculoskeletal system surgery,1094554643.71,Surgical Procedures
 51,Mato Grosso,Genitourinary system surgery,9061455.55,Surgical Procedures
 52,Goiás,Genitourinary system surgery,17475467.93,Surgical Procedures
 53,Distrito Federal,Genitourinary system surgery,5570507.42,Surgical Procedures
-Total,,Genitourinary system surgery,513419984.59,Surgical Procedures
+Total,Brazil (total),Genitourinary system surgery,513419984.59,Surgical Procedures
 11,Rondônia,Breast surgery,98288.59,Surgical Procedures
 12,Acre,Breast surgery,37918.11,Surgical Procedures
 13,Amazonas,Breast surgery,254061.29,Surgical Procedures
@@ -530,7 +530,7 @@ Total,,Genitourinary system surgery,513419984.59,Surgical Procedures
 51,Mato Grosso,Breast surgery,174047.14,Surgical Procedures
 52,Goiás,Breast surgery,610618.85,Surgical Procedures
 53,Distrito Federal,Breast surgery,416575.44,Surgical Procedures
-Total,,Breast surgery,22911523.24,Surgical Procedures
+Total,Brazil (total),Breast surgery,22911523.24,Surgical Procedures
 11,Rondônia,Obstetric surgery,8765091.62,Surgical Procedures
 12,Acre,Obstetric surgery,5967721.68,Surgical Procedures
 13,Amazonas,Obstetric surgery,17781586.66,Surgical Procedures
@@ -558,7 +558,7 @@ Total,,Breast surgery,22911523.24,Surgical Procedures
 51,Mato Grosso,Obstetric surgery,16619254.5,Surgical Procedures
 52,Goiás,Obstetric surgery,22118606.53,Surgical Procedures
 53,Distrito Federal,Obstetric surgery,14151747.2,Surgical Procedures
-Total,,Obstetric surgery,795478941.09,Surgical Procedures
+Total,Brazil (total),Obstetric surgery,795478941.09,Surgical Procedures
 11,Rondônia,Thoracic surgery,1141694.66,Surgical Procedures
 12,Acre,Thoracic surgery,405268.87,Surgical Procedures
 13,Amazonas,Thoracic surgery,3291310.01,Surgical Procedures
@@ -586,7 +586,7 @@ Total,,Obstetric surgery,795478941.09,Surgical Procedures
 51,Mato Grosso,Thoracic surgery,3735822.58,Surgical Procedures
 52,Goiás,Thoracic surgery,6294618.79,Surgical Procedures
 53,Distrito Federal,Thoracic surgery,4399707.28,Surgical Procedures
-Total,,Thoracic surgery,258510831.36,Surgical Procedures
+Total,Brazil (total),Thoracic surgery,258510831.36,Surgical Procedures
 11,Rondônia,Reconstructive surgery,230095.65,Surgical Procedures
 12,Acre,Reconstructive surgery,117626.1,Surgical Procedures
 13,Amazonas,Reconstructive surgery,1734452.91,Surgical Procedures
@@ -614,7 +614,7 @@ Total,,Thoracic surgery,258510831.36,Surgical Procedures
 51,Mato Grosso,Reconstructive surgery,576786.94,Surgical Procedures
 52,Goiás,Reconstructive surgery,6589533.16,Surgical Procedures
 53,Distrito Federal,Reconstructive surgery,443398.62,Surgical Procedures
-Total,,Reconstructive surgery,100717292.95,Surgical Procedures
+Total,Brazil (total),Reconstructive surgery,100717292.95,Surgical Procedures
 11,Rondônia,Oral and maxillofacial surgery,17785.99,Surgical Procedures
 12,Acre,Oral and maxillofacial surgery,12869.88,Surgical Procedures
 13,Amazonas,Oral and maxillofacial surgery,7902.56,Surgical Procedures
@@ -642,7 +642,7 @@ Total,,Reconstructive surgery,100717292.95,Surgical Procedures
 51,Mato Grosso,Oral and maxillofacial surgery,97918.45,Surgical Procedures
 52,Goiás,Oral and maxillofacial surgery,119642.06,Surgical Procedures
 53,Distrito Federal,Oral and maxillofacial surgery,45747.81,Surgical Procedures
-Total,,Oral and maxillofacial surgery,10052203.92,Surgical Procedures
+Total,Brazil (total),Oral and maxillofacial surgery,10052203.92,Surgical Procedures
 11,Rondônia,Other surgeries,11066772.08,Surgical Procedures
 12,Acre,Other surgeries,1298204.64,Surgical Procedures
 13,Amazonas,Other surgeries,17682052.53,Surgical Procedures
@@ -670,7 +670,7 @@ Total,,Oral and maxillofacial surgery,10052203.92,Surgical Procedures
 51,Mato Grosso,Other surgeries,30066630.33,Surgical Procedures
 52,Goiás,Other surgeries,69113865.83,Surgical Procedures
 53,Distrito Federal,Other surgeries,32491624.11,Surgical Procedures
-Total,,Other surgeries,3129595211.1,Surgical Procedures
+Total,Brazil (total),Other surgeries,3129595211.1,Surgical Procedures
 11,Rondônia,Oncology surgery,4111387.18,Surgical Procedures
 12,Acre,Oncology surgery,1095804.31,Surgical Procedures
 13,Amazonas,Oncology surgery,7746585.65,Surgical Procedures
@@ -698,7 +698,7 @@ Total,,Other surgeries,3129595211.1,Surgical Procedures
 51,Mato Grosso,Oncology surgery,6681006.92,Surgical Procedures
 52,Goiás,Oncology surgery,16943493.01,Surgical Procedures
 53,Distrito Federal,Oncology surgery,7785458.79,Surgical Procedures
-Total,,Oncology surgery,610205060.13,Surgical Procedures
+Total,Brazil (total),Oncology surgery,610205060.13,Surgical Procedures
 11,Rondônia,"Collection and examinations for organ, tissue, and cell donation and transplantation",0.0,"Organ, Tissue, and Cell Transplants"
 12,Acre,"Collection and examinations for organ, tissue, and cell donation and transplantation",0.0,"Organ, Tissue, and Cell Transplants"
 13,Amazonas,"Collection and examinations for organ, tissue, and cell donation and transplantation",0.0,"Organ, Tissue, and Cell Transplants"
@@ -726,7 +726,7 @@ Total,,Oncology surgery,610205060.13,Surgical Procedures
 51,Mato Grosso,"Collection and examinations for organ, tissue, and cell donation and transplantation",0.0,"Organ, Tissue, and Cell Transplants"
 52,Goiás,"Collection and examinations for organ, tissue, and cell donation and transplantation",10434.98,"Organ, Tissue, and Cell Transplants"
 53,Distrito Federal,"Collection and examinations for organ, tissue, and cell donation and transplantation",114384.92,"Organ, Tissue, and Cell Transplants"
-Total,,"Collection and examinations for organ, tissue, and cell donation and transplantation",4600853.55,"Organ, Tissue, and Cell Transplants"
+Total,Brazil (total),"Collection and examinations for organ, tissue, and cell donation and transplantation",4600853.55,"Organ, Tissue, and Cell Transplants"
 11,Rondônia,Actions related to organ and tissue donation for transplantation,355853.95,"Organ, Tissue, and Cell Transplants"
 12,Acre,Actions related to organ and tissue donation for transplantation,20758.92,"Organ, Tissue, and Cell Transplants"
 13,Amazonas,Actions related to organ and tissue donation for transplantation,112568.47,"Organ, Tissue, and Cell Transplants"
@@ -754,7 +754,7 @@ Total,,"Collection and examinations for organ, tissue, and cell donation and tra
 51,Mato Grosso,Actions related to organ and tissue donation for transplantation,8299.52,"Organ, Tissue, and Cell Transplants"
 52,Goiás,Actions related to organ and tissue donation for transplantation,494002.61,"Organ, Tissue, and Cell Transplants"
 53,Distrito Federal,Actions related to organ and tissue donation for transplantation,1441218.53,"Organ, Tissue, and Cell Transplants"
-Total,,Actions related to organ and tissue donation for transplantation,55825941.97,"Organ, Tissue, and Cell Transplants"
+Total,Brazil (total),Actions related to organ and tissue donation for transplantation,55825941.97,"Organ, Tissue, and Cell Transplants"
 11,Rondônia,Processing of tissues for transplantation,0.0,"Organ, Tissue, and Cell Transplants"
 12,Acre,Processing of tissues for transplantation,0.0,"Organ, Tissue, and Cell Transplants"
 13,Amazonas,Processing of tissues for transplantation,0.0,"Organ, Tissue, and Cell Transplants"
@@ -782,7 +782,7 @@ Total,,Actions related to organ and tissue donation for transplantation,55825941
 51,Mato Grosso,Processing of tissues for transplantation,0.0,"Organ, Tissue, and Cell Transplants"
 52,Goiás,Processing of tissues for transplantation,0.0,"Organ, Tissue, and Cell Transplants"
 53,Distrito Federal,Processing of tissues for transplantation,0.0,"Organ, Tissue, and Cell Transplants"
-Total,,Processing of tissues for transplantation,2471376.62,"Organ, Tissue, and Cell Transplants"
+Total,Brazil (total),Processing of tissues for transplantation,2471376.62,"Organ, Tissue, and Cell Transplants"
 11,Rondônia,"Organ, tissue, and cell transplantation",151332.73,"Organ, Tissue, and Cell Transplants"
 12,Acre,"Organ, tissue, and cell transplantation",1605676.92,"Organ, Tissue, and Cell Transplants"
 13,Amazonas,"Organ, tissue, and cell transplantation",1026038.54,"Organ, Tissue, and Cell Transplants"
@@ -810,7 +810,7 @@ Total,,Processing of tissues for transplantation,2471376.62,"Organ, Tissue, and 
 51,Mato Grosso,"Organ, tissue, and cell transplantation",0.0,"Organ, Tissue, and Cell Transplants"
 52,Goiás,"Organ, tissue, and cell transplantation",7883546.8,"Organ, Tissue, and Cell Transplants"
 53,Distrito Federal,"Organ, tissue, and cell transplantation",16417934.31,"Organ, Tissue, and Cell Transplants"
-Total,,"Organ, tissue, and cell transplantation",624210701.56,"Organ, Tissue, and Cell Transplants"
+Total,Brazil (total),"Organ, tissue, and cell transplantation",624210701.56,"Organ, Tissue, and Cell Transplants"
 11,Rondônia,Pre- and post-transplant follow-up and complications,16103.64,"Organ, Tissue, and Cell Transplants"
 12,Acre,Pre- and post-transplant follow-up and complications,126290.32,"Organ, Tissue, and Cell Transplants"
 13,Amazonas,Pre- and post-transplant follow-up and complications,25065.86,"Organ, Tissue, and Cell Transplants"
@@ -838,4 +838,4 @@ Total,,"Organ, tissue, and cell transplantation",624210701.56,"Organ, Tissue, an
 51,Mato Grosso,Pre- and post-transplant follow-up and complications,294.0,"Organ, Tissue, and Cell Transplants"
 52,Goiás,Pre- and post-transplant follow-up and complications,1012231.55,"Organ, Tissue, and Cell Transplants"
 53,Distrito Federal,Pre- and post-transplant follow-up and complications,3048967.56,"Organ, Tissue, and Cell Transplants"
-Total,,Pre- and post-transplant follow-up and complications,114798895.08,"Organ, Tissue, and Cell Transplants"
+Total,Brazil (total),Pre- and post-transplant follow-up and complications,114798895.08,"Organ, Tissue, and Cell Transplants"
