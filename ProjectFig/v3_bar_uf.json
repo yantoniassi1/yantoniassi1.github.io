@@ -1,0 +1,100 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/ProjectData/exp_subarea_UF_2023.csv"
+    },
+    "title": {
+      "text": "Brazil's Health Expenditure by Type in 2023",
+      "fontSize": 20,
+      "fontWeight": "bold",
+      "anchor": "middle"
+    },
+    "transform": [
+      {
+        "calculate": "datum.Value / 1000000",
+        "as": "Value_in_Millions"
+      },
+      {
+        "filter": "datum.Expense_Type !== 'Clinical treatments (other specialties)' && datum.Expense_Type !== 'Other surgeries'"
+      },
+      {
+        "filter": "datum.NAME_UF == stateSelector"
+      }
+    ],
+    "width": 500,
+    "height": 600,
+    "params": [
+      {
+        "name": "stateSelector",
+        "value": "Rondônia",
+        "bind": {
+          "input": "select",
+          "options": [
+            "Rondônia", "Acre", "Amazonas", "Roraima", "Pará", "Amapá", "Tocantins",
+            "Maranhão", "Piauí", "Ceará", "Rio Grande do Norte", "Paraíba", "Pernambuco",
+            "Alagoas", "Sergipe", "Bahia", "Minas Gerais", "Espírito Santo", "Rio de Janeiro",
+            "São Paulo", "Paraná", "Santa Catarina", "Rio Grande do Sul", "Mato Grosso do Sul",
+            "Mato Grosso", "Goiás", "Distrito Federal", "Brazil (total)"
+          ],
+          "name": "Select State: "
+        }
+      }
+    ],
+    "mark": {
+      "type": "bar",
+      "size": 20
+    },
+    "encoding": {
+      "y": {
+        "field": "Expense_Type",
+        "type": "nominal",
+        "sort": "-x",
+        "axis": {
+          "title": null,
+          "labelAlign": "right",
+          "labelLimit": 500,
+          "labelFontSize": 10,
+          "labelPadding": 5
+        }
+      },
+      "x": {
+        "field": "Value_in_Millions",
+        "type": "quantitative",
+        "axis": {
+          "title": "Total Value (in Millions)"
+        }
+      },
+      "color": {
+        "field": "Group",
+        "type": "nominal",
+        "legend": {"title": "Type of Expense"},
+        "scale": {
+          "domain": [
+            "Diagnostic Procedures",
+            "Clinical Procedures",
+            "Surgical Procedures",
+            "Organ, Tissue, and Cell Transplants"
+          ],
+          "range": [
+            "#273e47",  
+            "#d8973c",  
+            "#d8c99b",  
+            "#a4243b"   
+          ]
+        }
+      },
+      "tooltip": [
+        {"field": "Expense_Type", "type": "nominal", "title": "Expense Type"},
+        {"field": "Group", "type": "nominal", "title": "Group"},
+        {"field": "Value_in_Millions", "type": "quantitative", "title": "Value (in Millions)", "format": ".2f"}
+      ]
+    },
+    "config": {
+      "axisY": {
+        "labelLimit": 500,
+        "labelFontSize": 10,
+        "labelPadding": 5
+      }
+    }
+  }
+  

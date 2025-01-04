@@ -4,7 +4,7 @@
     "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/ProjectData/exp_subarea_total_2023.csv"
   },
   "width": 600,
-  "height": 300,
+  "height": 500,
 
   "title": "Expenditure by Subarea (2023) in Millions",
   "transform": [
