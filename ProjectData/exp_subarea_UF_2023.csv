@@ -26,7 +26,7 @@ CD_UF,NAME_UF,Expense_Type,Value,Group
 51,Mato Grosso,Collection of material,46103.24,Diagnostic Procedures
 52,Goiás,Collection of material,63784.33,Diagnostic Procedures
 53,Distrito Federal,Collection of material,329166.78,Diagnostic Procedures
-Total,,Collection of material,8082273.02,Diagnostic Procedures
+-,Brazil (total),Collection of material,8082273.02,Diagnostic Procedures
 11,Rondônia,Diagnosis by endoscopy,14813.26,Diagnostic Procedures
 12,Acre,Diagnosis by endoscopy,0.0,Diagnostic Procedures
 13,Amazonas,Diagnosis by endoscopy,109539.29,Diagnostic Procedures
