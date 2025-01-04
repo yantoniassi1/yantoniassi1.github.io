@@ -1,0 +1,31 @@
+CD_UF,NAME_UF,Subarea,Value,Group
+Total,,0201 Collection of material,8082273.02,Diagnostic Procedures
+Total,,0209 Diagnosis by endoscopy,25895011.17,Diagnostic Procedures
+Total,,0211 Diagnostic methods in specialties,5169559.03,Diagnostic Procedures
+Total,,0301 Consultations / Appointments / Follow-ups,64750433.53,Clinical Procedures
+Total,,0303 Clinical treatments (other specialties),7409910754.92,Clinical Procedures
+Total,,0304 Oncology treatment,459610429.56,Clinical Procedures
+Total,,0305 Nephrology treatment,407727303.8,Clinical Procedures
+Total,,"0308 Treatment of injuries, poisoning, and others resulting from external causes",207060633.61,Clinical Procedures
+Total,,0310 Childbirth and birth,515130174.16,Clinical Procedures
+Total,,"0401 Minor surgeries and surgeries of skin, subcutaneous tissue, and mucosa",49875705.26,Surgical Procedures
+Total,,0402 Endocrine gland surgery,9631533.23,Surgical Procedures
+Total,,0403 Central and peripheral nervous system surgery,369300163.91,Surgical Procedures
+Total,,"0404 Surgery of the upper airways, face, head, and neck",228143661.3,Surgical Procedures
+Total,,0405 Surgery of the visual system,225891840.04,Surgical Procedures
+Total,,0406 Surgery of the circulatory system,2135301556.82,Surgical Procedures
+Total,,"0407 Surgery of the digestive system, accessory organs, and abdominal wall",1211180433.09,Surgical Procedures
+Total,,0408 Musculoskeletal system surgery,1094554643.71,Surgical Procedures
+Total,,0409 Genitourinary system surgery,513419984.59,Surgical Procedures
+Total,,0410 Breast surgery,22911523.24,Surgical Procedures
+Total,,0411 Obstetric surgery,795478941.09,Surgical Procedures
+Total,,0412 Thoracic surgery,258510831.36,Surgical Procedures
+Total,,0413 Reconstructive surgery,100717292.95,Surgical Procedures
+Total,,0414 Oral and maxillofacial surgery,10052203.92,Surgical Procedures
+Total,,0415 Other surgeries,3129595211.1,Surgical Procedures
+Total,,0416 Oncology surgery,610205060.13,Surgical Procedures
+Total,,"0501 Collection and examinations for organ, tissue, and cell donation and transplantation",4600853.55,"Organ, Tissue, and Cell Transplants"
+Total,,0503 Actions related to organ and tissue donation for transplantation,55825941.97,"Organ, Tissue, and Cell Transplants"
+Total,,0504 Processing of tissues for transplantation,2471376.62,"Organ, Tissue, and Cell Transplants"
+Total,,"0505 Organ, tissue, and cell transplantation",624210701.56,"Organ, Tissue, and Cell Transplants"
+Total,,0506 Pre- and post-transplant follow-up and complications,114798895.08,"Organ, Tissue, and Cell Transplants"

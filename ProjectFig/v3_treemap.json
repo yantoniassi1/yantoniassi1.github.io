@@ -1,0 +1,59 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "path/to/your/preprocessed_data.json",
+      "format": {"type": "json"}
+    },
+    "transform": [
+      {
+        "calculate": "substring(datum.Subarea, 0, 2)",
+        "as": "GroupCode"
+      },
+      {
+        "lookup": "GroupCode",
+        "from": {
+          "data": {
+            "values": [
+              {"GroupCode": "02", "Group": "Diagnostic Procedures"},
+              {"GroupCode": "03", "Group": "Clinical Procedures"},
+              {"GroupCode": "04", "Group": "Surgical Procedures"},
+              {"GroupCode": "05", "Group": "Organ, Tissue, and Cell Transplants"}
+            ]
+          },
+          "key": "GroupCode",
+          "fields": ["Group"]
+        }
+      }
+    ],
+    "mark": {
+      "type": "rect"
+    },
+    "encoding": {
+      "x": {
+        "field": "Subarea",
+        "type": "nominal",
+        "axis": {"title": "Subarea"}
+      },
+      "y": {
+        "field": "Group",
+        "type": "nominal",
+        "axis": {"title": "Group"}
+      },
+      "color": {
+        "field": "Group",
+        "type": "nominal",
+        "legend": {"title": "Group"}
+      },
+      "size": {
+        "field": "Value",
+        "type": "quantitative",
+        "legend": {"title": "Value"}
+      },
+      "tooltip": [
+        {"field": "Subarea", "type": "nominal", "title": "Subarea"},
+        {"field": "Group", "type": "nominal", "title": "Group"},
+        {"field": "Value", "type": "quantitative", "title": "Value"}
+      ]
+    },
+    "title": "Treemap of Total Expenses per Subarea"
+  }
