@@ -1,29 +1,16 @@
 {
-  "config": {
-    "responsive": true,
-    "view": {"continuousWidth": 600, "continuousHeight": 500}
-  },
   "data": [
     {
       "type": "treemap",
       "name": "Expenses Treemap",
       "path": ["Group", "Subarea"],
-      "values": "Value",
+      "values": [],
       "hoverinfo": "label+value+percent parent+percent root",
-      "marker": {
-        "colorscale": "Blues"
-      },
       "textinfo": "label+value",
       "textposition": "middle center",
       "tiling": {"packing": "squarify"},
-      "customdata": [
-        {"field": "Group", "title": "Group"},
-        {"field": "Subarea", "title": "Subarea"},
-        {"field": "Value", "title": "Value"}
-      ],
-      "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/ProjectData/exp_subarea_total_2023.csv",
-      "format": {
-        "type": "csv"
+      "marker": {
+        "colorscale": "Blues"
       }
     }
   ],
@@ -37,5 +24,15 @@
       "b": 10,
       "t": 50
     }
+  },
+  "config": {
+    "responsive": true
+  },
+  "dataSource": {
+    "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/ProjectData/exp_subarea_total_2023.csv",
+    "format": {
+      "type": "csv"
+    }
   }
 }
+

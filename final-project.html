@@ -36,7 +36,7 @@
     <header>
         <h2> More Money, Better Health? The Efficiency Puzzle of Healthcare Spending in Brazil</h2>
         <nav>
-            <a href="index.html">Home</a> 
+            <a href="index.html">Home</a>
         </nav>
     </header>
 
@@ -45,7 +45,7 @@
         <p>
             This graph shows the unemployment rate in São Paulo from 2012 to 2020.
         </p>
-        <figure id="Location1"></figure> 
+        <figure id="Location1"></figure>
     </section>
 
     <!-- Vega Visualization: v3_map_expenses -->
@@ -76,24 +76,61 @@
             .then(() => console.log("Expenses graph loaded successfully"))
             .catch(console.error);
 
-        // Plotly Treemap
-        let figure_3_spec = "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/ProjectFig/v3_treemap.json";
+        // Plotly Treemap with CSV Fetch
+        const treemapCSVUrl = "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/ProjectData/exp_subarea_total_2023.csv";
 
-        fetch(figure_3_spec)
+        fetch(treemapCSVUrl)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok: ' + response.statusText);
                 }
-                return response.json();
+                return response.text();
             })
-            .then(spec => {
-                Plotly.newPlot('Location3', spec.data, spec.layout, spec.config);
+            .then(csvText => {
+                const rows = csvText.split('\n').slice(1); // Remove headers
+                const labels = [];
+                const parents = [];
+                const values = [];
+
+                rows.forEach(row => {
+                    const [Subarea, Value, Group] = row.split(',');
+                    if (Subarea && Value && Group) {
+                        labels.push(Subarea.trim());
+                        parents.push(Group.trim());
+                        values.push(parseFloat(Value));
+                    }
+                });
+
+                const treemapData = [{
+                    type: 'treemap',
+                    labels: labels,
+                    parents: parents,
+                    values: values,
+                    textinfo: 'label+value+percent parent+percent root',
+                    hoverinfo: 'label+value+percent parent+percent root',
+                    marker: {
+                        colorscale: 'Blues'
+                    }
+                }];
+
+                const layout = {
+                    title: 'Treemap of Total Expenses per Subarea',
+                    margin: {
+                        l: 10,
+                        r: 10,
+                        b: 10,
+                        t: 50
+                    }
+                };
+
+                Plotly.newPlot('Location3', treemapData, layout);
                 console.log("Treemap loaded successfully");
             })
             .catch(error => {
-                console.error("Error loading Treemap JSON:", error);
+                console.error('Error loading Treemap data:', error);
             });
     </script>
 </body>
 
 </html>
+
