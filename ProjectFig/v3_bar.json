@@ -1,0 +1,47 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/ProjectData/exp_subarea_total_2023.csv"
+  },
+  "width": 600,
+  "height": 300,
+
+  "title": "Expenditure by Subarea (2023) in Millions",
+  "transform": [
+    {
+      "calculate": "datum.Value / 1000000",
+      "as": "Value_in_Millions"
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "y": {
+      "field": "Subarea",
+      "type": "nominal",
+      "sort": "-x",
+      "axis": {
+        "title": "Subarea"
+      }
+    },
+    "x": {
+      "field": "Value_in_Millions",
+      "type": "quantitative",
+      "axis": {
+        "title": "Total Value (in Millions)"
+      }
+    },
+    "color": {
+      "field": "Group",
+      "type": "nominal",
+      "legend": {"title": "Group"}
+    },
+    "tooltip": [
+      {"field": "Subarea", "type": "nominal", "title": "Subarea"},
+      {"field": "Group", "type": "nominal", "title": "Group"},
+      {"field": "Value_in_Millions", "type": "quantitative", "title": "Value (in Millions)", "format": ".2f"}
+    ]
+  }
+}
+
+
+  
