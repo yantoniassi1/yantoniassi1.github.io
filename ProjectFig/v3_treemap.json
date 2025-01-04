@@ -1,59 +1,69 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "data": {
-      "url": "path/to/your/preprocessed_data.json",
-      "format": {"type": "json"}
-    },
-    "transform": [
-      {
-        "calculate": "substring(datum.Subarea, 0, 2)",
-        "as": "GroupCode"
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Treemap visualization of Total Expenses per Subarea",
+  "data": [
+    {
+      "name": "expenses",
+      "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/ProjectData/exp_subarea_total_2023.csv",
+      "format": {
+        "type": "csv"
       },
-      {
-        "lookup": "GroupCode",
-        "from": {
-          "data": {
-            "values": [
-              {"GroupCode": "02", "Group": "Diagnostic Procedures"},
-              {"GroupCode": "03", "Group": "Clinical Procedures"},
-              {"GroupCode": "04", "Group": "Surgical Procedures"},
-              {"GroupCode": "05", "Group": "Organ, Tissue, and Cell Transplants"}
-            ]
+      "transform": [
+          {
+            "type": "aggregate",
+            "groupby": ["Group", "Subarea"],
+            "fields": ["Value"],
+            "ops": ["sum"],
+            "as": ["TotalValue"]
           },
-          "key": "GroupCode",
-          "fields": ["Group"]
+          {
+            "type": "nest",
+            "keys": ["Group", "Subarea"]
+          }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "colorScale",
+      "type": "ordinal",
+      "domain": {"data": "expenses", "field": "Group"},
+      "range": {"scheme": "category10"}
+    }
+  ],
+  "marks": [
+    {
+      "type": "rect",
+      "from": {"data": "expenses"},
+      "encode": {
+        "enter": {
+          "x": {"field": "x0", "scale": "x"},
+          "y": {"field": "y0", "scale": "y"},
+          "x2": {"field": "x1", "scale": "x"},
+          "y2": {"field": "y1", "scale": "y"},
+          "fill": {"scale": "colorScale", "field": "Group"}
         }
       }
-    ],
-    "mark": {
-      "type": "rect"
     },
-    "encoding": {
-      "x": {
-        "field": "Subarea",
-        "type": "nominal",
-        "axis": {"title": "Subarea"}
-      },
-      "y": {
-        "field": "Group",
-        "type": "nominal",
-        "axis": {"title": "Group"}
-      },
-      "color": {
-        "field": "Group",
-        "type": "nominal",
-        "legend": {"title": "Group"}
-      },
-      "size": {
-        "field": "Value",
-        "type": "quantitative",
-        "legend": {"title": "Value"}
-      },
-      "tooltip": [
-        {"field": "Subarea", "type": "nominal", "title": "Subarea"},
-        {"field": "Group", "type": "nominal", "title": "Group"},
-        {"field": "Value", "type": "quantitative", "title": "Value"}
-      ]
-    },
-    "title": "Treemap of Total Expenses per Subarea"
+    {
+      "type": "text",
+      "from": {"data": "expenses"},
+      "encode": {
+        "enter": {
+          "x": {"field": "x0", "scale": "x", "offset": 5},
+          "y": {"field": "y0", "scale": "y", "offset": 5},
+          "text": {"field": "Subarea"},
+          "fontSize": {"value": 12},
+          "fill": {"value": "black"}
+        }
+      }
+    }
+  ],
+  "layout": {
+    "padding": 10,
+    "bounds": "full"
   }
+}
+
+
+
