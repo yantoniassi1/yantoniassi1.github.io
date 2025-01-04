@@ -1,69 +1,41 @@
 {
-  "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "description": "Treemap visualization of Total Expenses per Subarea",
+  "config": {
+    "responsive": true,
+    "view": {"continuousWidth": 600, "continuousHeight": 500}
+  },
   "data": [
     {
-      "name": "expenses",
+      "type": "treemap",
+      "name": "Expenses Treemap",
+      "path": ["Group", "Subarea"],
+      "values": "Value",
+      "hoverinfo": "label+value+percent parent+percent root",
+      "marker": {
+        "colorscale": "Blues"
+      },
+      "textinfo": "label+value",
+      "textposition": "middle center",
+      "tiling": {"packing": "squarify"},
+      "customdata": [
+        {"field": "Group", "title": "Group"},
+        {"field": "Subarea", "title": "Subarea"},
+        {"field": "Value", "title": "Value"}
+      ],
       "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/ProjectData/exp_subarea_total_2023.csv",
       "format": {
         "type": "csv"
-      },
-      "transform": [
-          {
-            "type": "aggregate",
-            "groupby": ["Group", "Subarea"],
-            "fields": ["Value"],
-            "ops": ["sum"],
-            "as": ["TotalValue"]
-          },
-          {
-            "type": "nest",
-            "keys": ["Group", "Subarea"]
-          }
-      ]
-    }
-  ],
-  "scales": [
-    {
-      "name": "colorScale",
-      "type": "ordinal",
-      "domain": {"data": "expenses", "field": "Group"},
-      "range": {"scheme": "category10"}
-    }
-  ],
-  "marks": [
-    {
-      "type": "rect",
-      "from": {"data": "expenses"},
-      "encode": {
-        "enter": {
-          "x": {"field": "x0", "scale": "x"},
-          "y": {"field": "y0", "scale": "y"},
-          "x2": {"field": "x1", "scale": "x"},
-          "y2": {"field": "y1", "scale": "y"},
-          "fill": {"scale": "colorScale", "field": "Group"}
-        }
-      }
-    },
-    {
-      "type": "text",
-      "from": {"data": "expenses"},
-      "encode": {
-        "enter": {
-          "x": {"field": "x0", "scale": "x", "offset": 5},
-          "y": {"field": "y0", "scale": "y", "offset": 5},
-          "text": {"field": "Subarea"},
-          "fontSize": {"value": 12},
-          "fill": {"value": "black"}
-        }
       }
     }
   ],
   "layout": {
-    "padding": 10,
-    "bounds": "full"
+    "title": {
+      "text": "Treemap of Total Expenses per Subarea"
+    },
+    "margin": {
+      "l": 10,
+      "r": 10,
+      "b": 10,
+      "t": 50
+    }
   }
 }
-
-
-

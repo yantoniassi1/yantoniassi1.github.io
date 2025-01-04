@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -8,17 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Project</title>
 
-            <!-- This is a link to the vega-lite which we're using to make graphs -->
-            <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-            <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
-            <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-        
-            <style>
-                #chartGrid {
-                    display: flex;
-                }
-                
-            </style>
+    <!-- Vega and Vega-Lite Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <!-- Plotly Library for Treemap -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <style>
+        #chartGrid {
+            display: flex;
+        }
+
+        #Location1, #Location2 {
+            margin-bottom: 30px;
+        }
+
+        #Location3 {
+            width: 960px;
+            height: 600px;
+            margin-bottom: 30px;
+        }
+    </style>
 </head>
 
 <body>
@@ -29,29 +40,60 @@
         </nav>
     </header>
 
-<section>
-    <p>
-        This graph shows the unemployment rate in São Paulo from 2012 to 2020.
-    </p>
-    <figure id="Location1"></figure> 
-</section>
+    <!-- Vega Visualization: v2_map_expenses -->
+    <section>
+        <p>
+            This graph shows the unemployment rate in São Paulo from 2012 to 2020.
+        </p>
+        <figure id="Location1"></figure> 
+    </section>
 
-<section>
-    <p>
-        This graph shows the expenses of the Brazilian government in 2020.
-    </p>
-    <figure id="Location2"></figure>
-</section>
+    <!-- Vega Visualization: v3_map_expenses -->
+    <section>
+        <p>
+            This graph shows the expenses of the Brazilian government in 2020.
+        </p>
+        <figure id="Location2"></figure>
+    </section>
 
-<script>
-    let figure_1_spec = "ProjectFig/v2_map_expenses.json"
-    let figure_2_spec = "ProjectFig/v3_treemap.json"
+    <!-- Plotly Visualization: v3_treemap -->
+    <section>
+        <p>
+            This treemap shows the total expenses per subarea of Brazil's healthcare spending in 2023.
+        </p>
+        <div id="Location3"></div>
+    </section>
 
-    vegaEmbed('#Location1', figure_1_spec) 
-    vegaEmbed('#Location2', figure_2_spec)
-    
-</script>
+    <script>
+        // Vega Graphs
+        let figure_1_spec = "ProjectFig/v2_map_expenses.json";
+        vegaEmbed('#Location1', figure_1_spec)
+            .then(() => console.log("Map expenses chart loaded successfully"))
+            .catch(console.error);
 
+        let figure_2_spec = "ProjectFig/v3_map_expenses.json";
+        vegaEmbed('#Location2', figure_2_spec)
+            .then(() => console.log("Expenses graph loaded successfully"))
+            .catch(console.error);
+
+        // Plotly Treemap
+        let figure_3_spec = "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/ProjectFig/v3_treemap.json";
+
+        fetch(figure_3_spec)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok: ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(spec => {
+                Plotly.newPlot('Location3', spec.data, spec.layout, spec.config);
+                console.log("Treemap loaded successfully");
+            })
+            .catch(error => {
+                console.error("Error loading Treemap JSON:", error);
+            });
+    </script>
 </body>
 
 </html>
