@@ -3,7 +3,7 @@
   "title": {
     "text": "Health Expenditure Per Capita by State in Brazil (2010-2023)",
     "anchor": "start",
-    "subtitle": ["Data Source: Your Dataset"],
+    "subtitle": ["Source: DataSUS | Public Health Budget Information System (SIOPS)"],
     "fontSize": 16,
     "subtitleFontSize": 12,
     "fontWeight": "bold"
@@ -44,6 +44,10 @@
     },
     {
       "filter": "datum.year == year"
+    },
+    {
+        "calculate": "datum.desp_tot_saude_pc_mun <= 400 ? 'R$200–400' : datum.desp_tot_saude_pc_mun <= 600 ? 'R$400–600' : datum.desp_tot_saude_pc_mun <= 800 ? 'R$600–800' : datum.desp_tot_saude_pc_mun <= 1000 ? 'R$800–1000' : datum.desp_tot_saude_pc_mun <= 1200 ? 'R$1000–1200' : datum.desp_tot_saude_pc_mun <= 1400 ? 'R$1200–1400' : datum.desp_tot_saude_pc_mun <= 1600 ? 'R$1400–1600' : 'R$1600+'",
+        "as": "expenditure_range"
     }
   ],
   "mark": {
@@ -53,16 +57,27 @@
   },
   "encoding": {
     "color": {
-    "field": "desp_tot_saude_pc_mun",
-    "type": "quantitative",
-    "title": "Health Expenditure (R$ per capita)",
-    "scale": {
-      "domain": [200, 600, 1000, 1200, 1400, 1600], 
-      "range": ["#FDE0C5", "#F57A5D", "#D1476A", "#972A82", "#5E1E74", "#2A144E", "#000000"]
+      "field": "expenditure_range",
+      "type": "nominal",
+      "title": "Health Expenditure Per Person",
+      "scale": {
+        "domain": [
+          "R$200–400", "R$400–600", "R$600–800", "R$800–1000", 
+          "R$1000–1200", "R$1200–1400", "R$1400–1600", "R$1600+"
+        ],
+        "range": [
+          "#FDE0C5", "#F57A5D", "#D1476A", "#972A82", 
+          "#5E1E74", "#3a0ca3", "#002855", "#000000"
+        ]
       },
-    "legend": {
-    }
-},
+      "legend": {
+        "orient": "right",
+        "labelFontSize": 10,
+        "titleFontSize": 12,
+        "symbolType": "circle",
+        "symbolSize": 200
+      }
+    },
     "tooltip": [
       {"field": "properties.NM_UF", "type": "nominal", "title": "State"},
       {
@@ -70,7 +85,8 @@
         "type": "quantitative",
         "title": "Expenditure (R$)",
         "format": ".2f"
-      }
+      },
+      {"field": "expenditure_range", "type": "nominal", "title": "Range"}
     ]
   },
   "config": {
@@ -81,3 +97,5 @@
     }
   }
 }
+
+  
