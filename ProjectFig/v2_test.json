@@ -1,0 +1,88 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "Health Expenditure Per Capita by State in Brazil (2010-2023)",
+      "anchor": "start",
+      "subtitle": ["Data Source: Your Dataset"],
+      "fontSize": 16,
+      "subtitleFontSize": 12,
+      "fontWeight": "bold"
+    },
+    "width": 500,
+    "height": 500,
+    "projection": {
+      "type": "mercator"
+    },
+    "params": [
+      {
+        "name": "year",
+        "value": 2010,
+        "bind": {
+          "input": "range",
+          "min": 2010,
+          "max": 2023,
+          "step": 1,
+          "name": "Select Year:"
+        }
+      }
+    ],
+    "data": {
+      "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/ProjectData/yearly_hexp_UF.csv",
+      "format": {"type": "csv"}
+    },
+    "transform": [
+      {
+        "lookup": "CD_UF",
+        "from": {
+          "data": {
+            "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/ProjectData/hexp_UF_unique.geojson",
+            "format": {"type": "json", "property": "features"}
+          },
+          "key": "properties.CD_UF",
+          "fields": ["type", "properties", "geometry"]
+        }
+      },
+      {
+        "filter": "datum.year == year"
+      }
+    ],
+    "mark": {
+      "type": "geoshape",
+      "stroke": "white",
+      "strokeWidth": 0.5
+    },
+    "encoding": {
+      "color": {
+        "field": "desp_tot_saude_pc_mun",
+        "type": "quantitative",
+        "title": "Health Expenditure (R$ per capita)",
+        "scale": {
+          "domain": [200, 600, 1000, 1200, 1400, 1600, 1800],
+          "range": ["#FDE0C5", "#F57A5D", "#D1476A", "#972A82", "#5E1E74", "#2A144E", "#000000"]
+        },
+        "legend": {
+          "title": "Expenditure (R$ per capita)",
+          "type": "symbol",
+          "orient": "right",
+          "labelExpr": "datum.label === '200' ? '200–600' : datum.label === '600' ? '600–1000' : datum.label === '1000' ? '1000–1200' : datum.label === '1200' ? '1200–1400' : datum.label === '1400' ? '1400–1600' : datum.label === '1600' ? '1600–1800+' : ''"
+        }
+      },
+      "tooltip": [
+        {"field": "properties.NM_UF", "type": "nominal", "title": "State"},
+        {
+          "field": "desp_tot_saude_pc_mun",
+          "type": "quantitative",
+          "title": "Expenditure (R$)",
+          "format": ".2f"
+        }
+      ]
+    },
+    "config": {
+      "view": {"stroke": "transparent"},
+      "legend": {
+        "titleFontSize": 12,
+        "labelFontSize": 10
+      }
+    }
+  }
+  
