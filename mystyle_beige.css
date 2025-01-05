@@ -1,0 +1,88 @@
+/* General body styling */
+body { 
+    /* Use Times New Roman font with fallbacks */
+    font-family: 'Times New Roman', Times, serif; 
+    font-size: 20px;
+    color: #333;
+    line-height: 1.6;
+    
+    /* Beige background */
+    background-color: #f8efe7;
+    
+    /* Center the content */
+    margin: 0 auto;
+    max-width: 800px; /* Keeps content from being too wide */
+    padding-top: 60px;
+    text-align: center; /* Centers inline and inline-block content */
+  }
+  
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 {
+    color: #333;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  
+  /* Adjust heading sizes */
+  h1 {
+    font-size: 3.0em;
+  }
+  
+  h2 {
+    font-size: 1.75em;
+  }
+  
+  .small {
+    font-size: 1.25em;
+  }
+  
+  /* Paragraph */
+  p {
+    margin-bottom: 1em;
+    font-weight: 300;
+  }
+  
+  /* Section spacing */
+  section {
+    margin-bottom: 2.5em;
+  }
+  
+  /* Links */
+  a {
+    color: #3d405b;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Ensures images behave as block elements */
+    margin: 0 auto; /* Center images horizontally */
+  }
+  
+  /* Styling for button-like links */
+  .button {
+  display: inline-block; /* Allows box-like appearance */
+  background-color: #457b9d; /* Dark green background */
+  color: white; /* White text color */
+  font-size: 1em; /* Larger text */
+  text-align: center; /* Center text inside the button */
+  text-decoration: none; /* Remove underline */
+  margin: 3px; /* Space between buttons */
+  padding: 10px 20px; /* Padding inside buttons */
+  border-radius: 5px; /* Rounded corners */
+  border: 2px solid #457b9d; /* Optional border for clarity */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for buttons */
+.button:hover {
+  background-color: #1d3557; /* Slightly darker green on hover */
+  border-color: #1d3557;
+}

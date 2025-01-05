@@ -8,8 +8,8 @@
     "subtitleFontSize": 12,
     "fontWeight": "bold"
   },
-  "width": 500,
-  "height": 500,
+  "width": 600,
+  "height": 600,
   "projection": {
     "type": "mercator"
   },
