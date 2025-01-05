@@ -56,13 +56,23 @@
     <figure id="Location2"></figure> 
 </section>
 
+<br>
+
+<section>
+    <p>
+        This graph shows the expenses break down by type (hospital procedures) by State in 2023.
+    </p>
+    <figure id="Location3"></figure>
+
 
 <script>
     let figure_1_spec = "ProjectFig/v2_map_expenses.json"
     let figure_2_spec = "ProjectFig/v3_bar_uf.json"
+    let figure_3_spec = "ProjectFig/v4_scatter_dropdown.json"
 
     vegaEmbed('#Location1', figure_1_spec) 
     vegaEmbed('#Location2', figure_2_spec)
+    vegaEmbed('#Location3', figure_3_spec)
 
 </script>
 
