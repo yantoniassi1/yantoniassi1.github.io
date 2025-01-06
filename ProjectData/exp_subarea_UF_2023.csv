@@ -223,34 +223,34 @@ Total,Brazil (total),Nephrology treatment,407727303.8,Clinical Procedures
 52,Goiás,"Treatment of injuries, poisoning, and others resulting from external causes",6303639.48,Clinical Procedures
 53,Distrito Federal,"Treatment of injuries, poisoning, and others resulting from external causes",6574101.12,Clinical Procedures
 Total,Brazil (total),"Treatment of injuries, poisoning, and others resulting from external causes",207060633.61,Clinical Procedures
-11,Rondônia,Childbirth and birth,4053737.26,Clinical Procedures
-12,Acre,Childbirth and birth,3494307.84,Clinical Procedures
-13,Amazonas,Childbirth and birth,18345615.49,Clinical Procedures
-14,Roraima,Childbirth and birth,3014932.48,Clinical Procedures
-15,Pará,Childbirth and birth,26108918.5,Clinical Procedures
-16,Amapá,Childbirth and birth,4220878.58,Clinical Procedures
-17,Tocantins,Childbirth and birth,5339630.5,Clinical Procedures
-21,Maranhão,Childbirth and birth,21199553.35,Clinical Procedures
-22,Piauí,Childbirth and birth,8851089.07,Clinical Procedures
-23,Ceará,Childbirth and birth,18358350.27,Clinical Procedures
-24,Rio Grande do Norte,Childbirth and birth,7299925.26,Clinical Procedures
-25,Paraíba,Childbirth and birth,9798946.77,Clinical Procedures
-26,Pernambuco,Childbirth and birth,28922801.77,Clinical Procedures
-27,Alagoas,Childbirth and birth,10806729.87,Clinical Procedures
-28,Sergipe,Childbirth and birth,8377971.8,Clinical Procedures
-29,Bahia,Childbirth and birth,40515388.29,Clinical Procedures
-31,Minas Gerais,Childbirth and birth,49620587.62,Clinical Procedures
-32,Espírito Santo,Childbirth and birth,10141002.53,Clinical Procedures
-33,Rio de Janeiro,Childbirth and birth,36800357.27,Clinical Procedures
-35,São Paulo,Childbirth and birth,92865909.59,Clinical Procedures
-41,Paraná,Childbirth and birth,24227282.13,Clinical Procedures
-42,Santa Catarina,Childbirth and birth,22827884.05,Clinical Procedures
-43,Rio Grande do Sul,Childbirth and birth,21915675.32,Clinical Procedures
-50,Mato Grosso do Sul,Childbirth and birth,6455695.16,Clinical Procedures
-51,Mato Grosso,Childbirth and birth,9136024.4,Clinical Procedures
-52,Goiás,Childbirth and birth,11616895.35,Clinical Procedures
-53,Distrito Federal,Childbirth and birth,10814083.64,Clinical Procedures
-Total,Brazil (total),Childbirth and birth,515130174.16,Clinical Procedures
+11,Rondônia,Childbirth,4053737.26,Clinical Procedures
+12,Acre,Childbirth,3494307.84,Clinical Procedures
+13,Amazonas,Childbirth,18345615.49,Clinical Procedures
+14,Roraima,Childbirth,3014932.48,Clinical Procedures
+15,Pará,Childbirth,26108918.5,Clinical Procedures
+16,Amapá,Childbirth,4220878.58,Clinical Procedures
+17,Tocantins,Childbirth,5339630.5,Clinical Procedures
+21,Maranhão,Childbirth,21199553.35,Clinical Procedures
+22,Piauí,Childbirth,8851089.07,Clinical Procedures
+23,Ceará,Childbirth,18358350.27,Clinical Procedures
+24,Rio Grande do Norte,Childbirth,7299925.26,Clinical Procedures
+25,Paraíba,Childbirth,9798946.77,Clinical Procedures
+26,Pernambuco,Childbirth,28922801.77,Clinical Procedures
+27,Alagoas,Childbirth,10806729.87,Clinical Procedures
+28,Sergipe,Childbirth,8377971.8,Clinical Procedures
+29,Bahia,Childbirth,40515388.29,Clinical Procedures
+31,Minas Gerais,Childbirth,49620587.62,Clinical Procedures
+32,Espírito Santo,Childbirth,10141002.53,Clinical Procedures
+33,Rio de Janeiro,Childbirth,36800357.27,Clinical Procedures
+35,São Paulo,Childbirth,92865909.59,Clinical Procedures
+41,Paraná,Childbirth,24227282.13,Clinical Procedures
+42,Santa Catarina,Childbirth,22827884.05,Clinical Procedures
+43,Rio Grande do Sul,Childbirth,21915675.32,Clinical Procedures
+50,Mato Grosso do Sul,Childbirth,6455695.16,Clinical Procedures
+51,Mato Grosso,Childbirth,9136024.4,Clinical Procedures
+52,Goiás,Childbirth,11616895.35,Clinical Procedures
+53,Distrito Federal,Childbirth,10814083.64,Clinical Procedures
+Total,Brazil (total),Childbirth,515130174.16,Clinical Procedures
 11,Rondônia,"Minor surgeries and surgeries of skin, subcutaneous tissue, and mucosa",354410.33,Surgical Procedures
 12,Acre,"Minor surgeries and surgeries of skin, subcutaneous tissue, and mucosa",139653.14,Surgical Procedures
 13,Amazonas,"Minor surgeries and surgeries of skin, subcutaneous tissue, and mucosa",283218.59,Surgical Procedures
