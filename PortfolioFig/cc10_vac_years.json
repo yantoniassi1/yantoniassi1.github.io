@@ -49,10 +49,10 @@
   "params": [
     {
       "name": "yearSelector",
-      "value": 2013,
+      "value": 2022,
       "bind": {
         "input": "range",
-        "min": 2013,
+        "min": 2014,
         "max": 2022,
         "step": 1,
         "name": "Select Year: "
