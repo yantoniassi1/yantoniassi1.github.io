@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
-    "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/ProjectData/exp_subarea_UF_2023.csv"
+    "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/ProjectData/DataForFinalCharts/exp_subarea_UF_2023.csv"
   },
   "title": {
     "text": "Distribution of Brazil's Health Expenditure in 2023",
