@@ -94,6 +94,14 @@ figure {
     overflow-x: auto; /* Ensure horizontal scrolling if content overflows */
 }
 
+/* Default Visualization Styling */
+#Location1, #Location2, #Location3, #Location4, #Location5 {
+    width: 100%; /* Take full width of the container */
+    max-width: 800px; /* Match the text container width */
+    margin: 0 auto; /* Center align */
+    overflow-x: auto; /* Prevent clipping */
+}
+
 /* Links */
 a {
     color: #3d405b;
