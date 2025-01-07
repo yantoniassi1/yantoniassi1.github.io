@@ -31,7 +31,7 @@
       "filter": "datum.NAME_UF == stateSelector"
     }
   ],
-  "width": 600,
+  "width": 300,
   "height": 600,
   "params": [
     {

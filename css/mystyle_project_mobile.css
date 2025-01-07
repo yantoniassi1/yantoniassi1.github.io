@@ -87,25 +87,11 @@ h4 {
     font-size: 1.25em;
 }
 
-/* General Section Styling */
-section {
-    margin-bottom: 2.5em;
-    text-align: center; 
-    padding: 0 10px;
-}
-
-/* Figure Styling */
+/* General Figure Styling */
 figure {
-    margin: 0 auto; 
+    margin: 0 auto;
     text-align: center;
-    max-width: 100%;
-    overflow-x: auto;
-}
-
-#Location2 {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    overflow-x: auto;
+    overflow-x: auto; /* Ensure horizontal scrolling if content overflows */
 }
 
 /* Links */
@@ -154,6 +140,8 @@ select option {
 }
 
 /* Responsive Adjustments */
+
+/* Tablets and Medium Screens (max-width: 1024px) */
 @media (max-width: 1024px) {
     body {
         font-size: 18px;
@@ -175,8 +163,15 @@ select option {
     h2 {
         font-size: 1.6em;
     }
+
+    /* Ensure visualization adapts better */
+    #Location1, #Location2, #Location3, #Location4, #Location5 {
+        width: 95vw; /* Slightly more width on tablets */
+        max-width: 1000px;
+    }
 }
 
+/* Mobile Devices (max-width: 768px) */
 @media (max-width: 768px) {
     body {
         font-size: 16px;
@@ -199,11 +194,6 @@ select option {
         font-size: 1.4em;
     }
 
-    #Location2 {
-        width: 100%;
-        margin: 0;
-    }
-    
     section {
         margin-bottom: 1.5em;
     }
@@ -211,8 +201,16 @@ select option {
     figure {
         overflow-x: auto;
     }
+
+    /* Visualization adapts fully */
+    #Location1, #Location2, #Location3, #Location4, #Location5 {
+        width: 100vw; /* Use full screen width on mobile */
+        max-width: none; /* Remove width limit */
+        overflow-x: auto; /* Enable scrolling if needed */
+    }
 }
 
+/* Small Mobile Devices (max-width: 480px) */
 @media (max-width: 480px) {
     body {
         font-size: 14px;
@@ -246,8 +244,15 @@ select option {
     section {
         margin-bottom: 1em;
     }
-    
+
     #chartGrid {
         flex-direction: column;
+    }
+
+    /* Visualization adjustments for smaller screens */
+    #Location1, #Location2, #Location3, #Location4, #Location5 {
+        width: 100vw; /* Take full width */
+        max-width: none;
+        overflow-x: auto;
     }
 }
