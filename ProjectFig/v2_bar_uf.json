@@ -1,0 +1,121 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/ProjectData/exp_subarea_UF_2023.csv"
+  },
+  "title": {
+    "text": "Distribution of Brazil's Health Expenditure in 2023",
+    "subtitle": ["Source: DataSUS Ambulatory Information System - SIA / Health Ministry Brazil",
+                  " "],
+    "font": "Montserrat, sans-serif",
+    "fontSize": 20,
+    "fontWeight": "bold",
+    "color": "#1a1a1a",
+    "subtitleFont": "Montserrat, sans-serif",
+    "subtitleFontSize": 14,
+    "subtitleColor": "#676A86",
+    "anchor": "start",      
+    "align": "left",          
+    "dx": 10,                
+    "offset": 10          
+    },
+  "transform": [
+    {
+      "calculate": "datum.Value / 1000000",
+      "as": "Value_in_Millions"
+    },
+    {
+      "filter": "datum.Expense_Type !== 'Clinical treatments (other specialties)' && datum.Expense_Type !== 'Other surgeries'"
+    },
+    {
+      "filter": "datum.NAME_UF == stateSelector"
+    }
+  ],
+  "width": 300,
+  "height": 600,
+  "params": [
+    {
+      "name": "stateSelector",
+      "value": "Brazil (total)",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Rondônia", "Acre", "Amazonas", "Roraima", "Pará", "Amapá", "Tocantins",
+          "Maranhão", "Piauí", "Ceará", "Rio Grande do Norte", "Paraíba", "Pernambuco",
+          "Alagoas", "Sergipe", "Bahia", "Minas Gerais", "Espírito Santo", "Rio de Janeiro",
+          "São Paulo", "Paraná", "Santa Catarina", "Rio Grande do Sul", "Mato Grosso do Sul",
+          "Mato Grosso", "Goiás", "Distrito Federal", "Brazil (total)"
+        ],
+        "name": "Select State: "
+      }
+    }
+  ],
+  "mark": {
+    "type": "bar",
+    "size": 20
+  },
+  "encoding": {
+    "y": {
+      "field": "Expense_Type",
+      "type": "nominal",
+      "sort": "-x",
+      "axis": {
+        "title": null,
+        "labelAlign": "right",
+        "labelLimit": 500,
+        "labelFontSize": 12,
+        "labelPadding": 5
+      }
+    },
+    "x": {
+      "field": "Value_in_Millions",
+      "type": "quantitative",
+      "axis": {
+        "title": "Total Value (in Millions of R$)"
+      }
+    },
+    "color": {
+      "field": "Group",
+      "type": "nominal",
+      "legend": {
+        "title": "Healthcare Spending Category",
+        "orient": "bottom-right",
+        "anchor": "bottom-right",
+        "labelFontSize": 10,
+        "symbolSize": 200,
+        "fillColor": "white",
+        "strokeColor": "black",
+        "padding": 10
+      },
+      "scale": {
+        "domain": [
+          "Diagnostic Procedures",
+          "Clinical Procedures",
+          "Surgical Procedures",
+          "Organ, Tissue, and Cell Transplants"
+        ],
+        "range": [
+          "#273e47",  
+          "#d8973c",  
+          "#d8c99b",  
+          "#a4243b"   
+        ]
+      }
+    },
+    "tooltip": [
+      {"field": "Expense_Type", "type": "nominal", "title": "Expense Type"},
+      {"field": "Group", "type": "nominal", "title": "Group"},
+      {"field": "Value_in_Millions", "type": "quantitative", "title": "Value (in Millions)", "format": ".2f"}
+    ]
+  },
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    },
+    "axisY": {
+      "labelFontSize": 14,
+      "labelPadding": 5
+    }
+  },
+  "padding": {"top": 40}
+}
