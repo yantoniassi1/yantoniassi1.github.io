@@ -1,0 +1,192 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+    "title": {
+      "text": "Correlation Between Health Outcomes and Health Expenditure per Capita",
+      "align": "left",
+      "anchor": "start",
+      "dx": 10,
+      "subtitle": [
+        "Explore the relationship between health expenditure and health outcomes across the top 1,000 Brazilian municipalities with the highest per capita health expenditure.",
+        "Use the dropdown to select indicators",
+        "Source: DataSUS / Health Ministry Brazil"
+      ],
+      "subtitleColor": "#676A86",
+      "subtitleFontSize": 14,
+      "subtitleFontWeight": "normal",
+      "font": "Montserrat, sans-serif",
+      "fontSize": 20,
+      "fontWeight": "bold",
+      "color": "#1a1a1a"
+    },
+    "width": {"step": 50},
+    "height": 400,
+    "autosize": {
+      "type": "fit-x",
+      "resize": true,
+      "contains": "padding"
+    },
+    "config": {
+      "font": "Montserrat, sans-serif",
+      "background": "#ffffff",
+      "view": {"stroke": "transparent"},
+      "range": {"category": {"scheme": "observable10"}},
+      "axis": {
+        "labelColor": "#495057",
+        "labelFontSize": 12,
+        "labelOpacity": 0.7,
+        "tickColor": "#495057",
+        "tickOpacity": 0.5,
+        "domainColor": "#ced4da",
+        "domainOpacity": 0.5,
+        "gridColor": "#6c757d",
+        "gridDash": [2, 2],
+        "gridOpacity": 0.3,
+        "titleColor": "#676A86",
+        "titleFontSize": 14,
+        "titleOpacity": 0.8,
+        "tickSize": 4
+      },
+      "legend": {
+        "symbolSize": 200,
+        "labelFontSize": 14,
+        "labelColor": "#1a1a1a",
+        "titleFontSize": 14,
+        "titleFontWeight": "bold",
+        "titleColor": "#1a1a1a"
+      }
+    },
+    "data": {
+      "url": "https://raw.githubusercontent.com/yantoniassi1/yantoniassi1.github.io/main/ProjectData/DataForFinalCharts/top_3000_mun.csv"
+    },
+    "params": [
+      {
+        "name": "variable_selection",
+        "bind": {
+          "input": "select",
+          "options": [
+            "tx_leito_sus",
+            "tx_hosp",
+            "tx_mort_evit",
+            "tx_mort",
+            "pct_prenatal_adeq"
+          ],
+          "labels": [
+            "Number of Hospital Beds (per 100,000 Hab.)",
+            "Hospitalizations (per 100,000 Hab.)",
+            "Avoidable Cause Mortality (per 100,000 Hab.)",
+            "Gross Mortality (per 100,000 Hab.)",
+            "Adequate Prenatal Care (%)"
+          ],
+          "name": "Select Indicator:"
+        },
+        "value": "tx_mort"
+      },
+      {
+        "name": "param_127",
+        "select": {"type": "point", "fields": ["regiao_geo"]},
+        "bind": "legend"
+      },
+      {
+        "name": "param_128",
+        "select": {"type": "interval", "encodings": ["x", "y"]},
+        "bind": "scales"
+      },
+      {
+        "name": "zoom",
+        "select": {
+          "type": "interval",
+          "encodings": ["x", "y"],
+          "translate": "[touch, mouse]",
+          "zoom": "wheel"
+        }
+      }
+    ],
+    "layer": [
+      {
+        "mark": {
+          "type": "circle",
+          "opacity": 0.6,
+          "size": 50
+        },
+        "encoding": {
+          "x": {
+            "field": "desp_tot_saude_pc_mun",
+            "title": "Total Health Expenditure per Capita (Municipality)",
+            "type": "quantitative",
+            "axis": {"labelFontSize": 12, "titleFontSize": 14}
+          },
+          "y": {
+            "field": "value",
+            "title": "Selected Variable",
+            "type": "quantitative",
+            "axis": {"labelFontSize": 12, "titleFontSize": 14}
+          },
+          "color": {
+            "field": "regiao_geo",
+            "title": "Geographic Region",
+            "type": "nominal",
+            "legend": {
+              "labelFontSize": 14,
+              "symbolSize": 200,
+              "titleFontSize": 14,
+              "titleFontWeight": "bold"
+            }
+          },
+          "opacity": {
+            "condition": {"param": "param_127", "value": 0.6},
+            "value": 0.2
+          },
+          "tooltip": [
+            {"field": "nomemun", "title": "Municipality", "type": "nominal"},
+            {
+              "field": "desp_tot_saude_pc_mun",
+              "title": "Expenditure (R$)",
+              "type": "quantitative",
+              "format": ".2f"
+            },
+            {"field": "value", "title": "Value", "type": "quantitative"},
+            {"field": "regiao_geo", "title": "Region", "type": "nominal"}
+          ]
+        },
+        "transform": [
+          {
+            "fold": [
+              "tx_leito_sus",
+              "tx_hosp",
+              "tx_mort_evit",
+              "tx_mort",
+              "pct_prenatal_adeq"
+            ],
+            "as": ["variable", "value"]
+          },
+          {"filter": "(datum.variable === variable_selection)"}
+        ]
+      },
+      {
+        "mark": {
+          "type": "line",
+          "color": "#495057",
+          "strokeDash": [5, 5]
+        },
+        "encoding": {
+          "x": {"field": "desp_tot_saude_pc_mun", "type": "quantitative"},
+          "y": {"field": "value", "type": "quantitative"}
+        },
+        "transform": [
+          {
+            "fold": [
+              "tx_leito_sus",
+              "tx_hosp",
+              "tx_mort_evit",
+              "tx_mort",
+              "pct_prenatal_adeq"
+            ],
+            "as": ["variable", "value"]
+          },
+          {"filter": "(datum.variable === variable_selection)"},
+          {"on": "desp_tot_saude_pc_mun", "regression": "value", "method": "linear"}
+        ]
+      }
+    ]
+  }
+  
