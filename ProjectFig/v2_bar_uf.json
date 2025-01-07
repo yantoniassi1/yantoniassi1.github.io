@@ -31,7 +31,7 @@
       "filter": "datum.NAME_UF == stateSelector"
     }
   ],
-  "width": "container",
+  "width": 800,
   "height": 600,
   "autosize": {
     "type": "fit-x",
