@@ -1,0 +1,251 @@
+Race,Year,Prenatal_Care,Percentage
+White,2023,None,0.0038
+Black,2023,None,0.009
+Asian,2023,None,0.0034
+Mixed Race,2023,None,0.0067
+Indigenous,2023,None,0.0218
+White,2022,None,0.0039
+Black,2022,None,0.0092
+Asian,2022,None,0.0044
+Mixed Race,2022,None,0.0069
+Indigenous,2022,None,0.0148
+White,2021,None,0.0038
+Black,2021,None,0.0097
+Asian,2021,None,0.0038
+Mixed Race,2021,None,0.007
+Indigenous,2021,None,0.0118
+White,2020,None,0.0038
+Black,2020,None,0.0101
+Asian,2020,None,0.0048
+Mixed Race,2020,None,0.0075
+Indigenous,2020,None,0.0125
+White,2019,None,0.0037
+Black,2019,None,0.0101
+Asian,2019,None,0.0043
+Mixed Race,2019,None,0.0067
+Indigenous,2019,None,0.0095
+White,2018,None,0.0038
+Black,2018,None,0.0108
+Asian,2018,None,0.005
+Mixed Race,2018,None,0.0071
+Indigenous,2018,None,0.0117
+White,2017,None,0.0037
+Black,2017,None,0.0113
+Asian,2017,None,0.0038
+Mixed Race,2017,None,0.0065
+Indigenous,2017,None,0.0162
+White,2016,None,0.0038
+Black,2016,None,0.0112
+Asian,2016,None,0.0044
+Mixed Race,2016,None,0.006
+Indigenous,2016,None,0.0148
+White,2015,None,0.0037
+Black,2015,None,0.0112
+Asian,2015,None,0.0051
+Mixed Race,2015,None,0.0059
+Indigenous,2015,None,0.0144
+White,2014,None,0.0041
+Black,2014,None,0.0116
+Asian,2014,None,0.0054
+Mixed Race,2014,None,0.0064
+Indigenous,2014,None,0.0174
+White,2023,Inadequate,0.1086
+Black,2023,Inadequate,0.1787
+Asian,2023,Inadequate,0.1321
+Mixed Race,2023,Inadequate,0.168
+Indigenous,2023,Inadequate,0.3211
+White,2022,Inadequate,0.114
+Black,2022,Inadequate,0.1892
+Asian,2022,Inadequate,0.1445
+Mixed Race,2022,Inadequate,0.1802
+Indigenous,2022,Inadequate,0.3463
+White,2021,Inadequate,0.1125
+Black,2021,Inadequate,0.1898
+Asian,2021,Inadequate,0.1453
+Mixed Race,2021,Inadequate,0.182
+Indigenous,2021,Inadequate,0.3524
+White,2020,Inadequate,0.1212
+Black,2020,Inadequate,0.2102
+Asian,2020,Inadequate,0.1521
+Mixed Race,2020,Inadequate,0.2012
+Indigenous,2020,Inadequate,0.3694
+White,2019,Inadequate,0.1205
+Black,2019,Inadequate,0.2171
+Asian,2019,Inadequate,0.15
+Mixed Race,2019,Inadequate,0.1996
+Indigenous,2019,Inadequate,0.3765
+White,2018,Inadequate,0.1235
+Black,2018,Inadequate,0.2234
+Asian,2018,Inadequate,0.1525
+Mixed Race,2018,Inadequate,0.2098
+Indigenous,2018,Inadequate,0.3722
+White,2017,Inadequate,0.1286
+Black,2017,Inadequate,0.2295
+Asian,2017,Inadequate,0.1634
+Mixed Race,2017,Inadequate,0.218
+Indigenous,2017,Inadequate,0.3936
+White,2016,Inadequate,0.1347
+Black,2016,Inadequate,0.2408
+Asian,2016,Inadequate,0.1595
+Mixed Race,2016,Inadequate,0.2245
+Indigenous,2016,Inadequate,0.3993
+White,2015,Inadequate,0.1412
+Black,2015,Inadequate,0.2496
+Asian,2015,Inadequate,0.18
+Mixed Race,2015,Inadequate,0.2322
+Indigenous,2015,Inadequate,0.4067
+White,2014,Inadequate,0.1454
+Black,2014,Inadequate,0.2581
+Asian,2014,Inadequate,0.1867
+Mixed Race,2014,Inadequate,0.2421
+Indigenous,2014,Inadequate,0.4214
+White,2023,Intermediate,0.0441
+Black,2023,Intermediate,0.061
+Asian,2023,Intermediate,0.058
+Mixed Race,2023,Intermediate,0.0651
+Indigenous,2023,Intermediate,0.0986
+White,2022,Intermediate,0.0481
+Black,2022,Intermediate,0.0655
+Asian,2022,Intermediate,0.0667
+Mixed Race,2022,Intermediate,0.072
+Indigenous,2022,Intermediate,0.1063
+White,2021,Intermediate,0.0485
+Black,2021,Intermediate,0.0695
+Asian,2021,Intermediate,0.0633
+Mixed Race,2021,Intermediate,0.0773
+Indigenous,2021,Intermediate,0.1138
+White,2020,Intermediate,0.0514
+Black,2020,Intermediate,0.0755
+Asian,2020,Intermediate,0.0699
+Mixed Race,2020,Intermediate,0.0859
+Indigenous,2020,Intermediate,0.1262
+White,2019,Intermediate,0.0477
+Black,2019,Intermediate,0.0702
+Asian,2019,Intermediate,0.0644
+Mixed Race,2019,Intermediate,0.0771
+Indigenous,2019,Intermediate,0.1159
+White,2018,Intermediate,0.0491
+Black,2018,Intermediate,0.0721
+Asian,2018,Intermediate,0.066
+Mixed Race,2018,Intermediate,0.0817
+Indigenous,2018,Intermediate,0.1252
+White,2017,Intermediate,0.0497
+Black,2017,Intermediate,0.0753
+Asian,2017,Intermediate,0.0618
+Mixed Race,2017,Intermediate,0.0859
+Indigenous,2017,Intermediate,0.1207
+White,2016,Intermediate,0.051
+Black,2016,Intermediate,0.078
+Asian,2016,Intermediate,0.0673
+Mixed Race,2016,Intermediate,0.0871
+Indigenous,2016,Intermediate,0.131
+White,2015,Intermediate,0.0512
+Black,2015,Intermediate,0.0802
+Asian,2015,Intermediate,0.0696
+Mixed Race,2015,Intermediate,0.0885
+Indigenous,2015,Intermediate,0.1158
+White,2014,Intermediate,0.0529
+Black,2014,Intermediate,0.0807
+Asian,2014,Intermediate,0.0685
+Mixed Race,2014,Intermediate,0.0909
+Indigenous,2014,Intermediate,0.1197
+White,2023,Adequate,0.8266
+Black,2023,Adequate,0.7231
+Asian,2023,Adequate,0.7814
+Mixed Race,2023,Adequate,0.7264
+Indigenous,2023,Adequate,0.4978
+White,2022,Adequate,0.8144
+Black,2022,Adequate,0.7054
+Asian,2022,Adequate,0.7577
+Mixed Race,2022,Adequate,0.6998
+Indigenous,2022,Adequate,0.461
+White,2021,Adequate,0.8125
+Black,2021,Adequate,0.6933
+Asian,2021,Adequate,0.7534
+Mixed Race,2021,Adequate,0.6773
+Indigenous,2021,Adequate,0.4386
+White,2020,Adequate,0.8004
+Black,2020,Adequate,0.667
+Asian,2020,Adequate,0.7416
+Mixed Race,2020,Adequate,0.6502
+Indigenous,2020,Adequate,0.404
+White,2019,Adequate,0.8044
+Black,2019,Adequate,0.6662
+Asian,2019,Adequate,0.7485
+Mixed Race,2019,Adequate,0.6616
+Indigenous,2019,Adequate,0.4107
+White,2018,Adequate,0.7995
+Black,2018,Adequate,0.6531
+Asian,2018,Adequate,0.7424
+Mixed Race,2018,Adequate,0.6487
+Indigenous,2018,Adequate,0.3954
+White,2017,Adequate,0.7901
+Black,2017,Adequate,0.6384
+Asian,2017,Adequate,0.7192
+Mixed Race,2017,Adequate,0.6291
+Indigenous,2017,Adequate,0.3658
+White,2016,Adequate,0.7777
+Black,2016,Adequate,0.6225
+Asian,2016,Adequate,0.7314
+Mixed Race,2016,Adequate,0.6173
+Indigenous,2016,Adequate,0.358
+White,2015,Adequate,0.7618
+Black,2015,Adequate,0.6012
+Asian,2015,Adequate,0.7009
+Mixed Race,2015,Adequate,0.6041
+Indigenous,2015,Adequate,0.345
+White,2014,Adequate,0.7503
+Black,2014,Adequate,0.5835
+Asian,2014,Adequate,0.688
+Mixed Race,2014,Adequate,0.5825
+Indigenous,2014,Adequate,0.3189
+White,2023,Unclassified,0.017
+Black,2023,Unclassified,0.0282
+Asian,2023,Unclassified,0.0251
+Mixed Race,2023,Unclassified,0.0338
+Indigenous,2023,Unclassified,0.0607
+White,2022,Unclassified,0.0197
+Black,2022,Unclassified,0.0306
+Asian,2022,Unclassified,0.0267
+Mixed Race,2022,Unclassified,0.041
+Indigenous,2022,Unclassified,0.0717
+White,2021,Unclassified,0.0228
+Black,2021,Unclassified,0.0378
+Asian,2021,Unclassified,0.0342
+Mixed Race,2021,Unclassified,0.0565
+Indigenous,2021,Unclassified,0.0834
+White,2020,Unclassified,0.0231
+Black,2020,Unclassified,0.0373
+Asian,2020,Unclassified,0.0316
+Mixed Race,2020,Unclassified,0.0552
+Indigenous,2020,Unclassified,0.0879
+White,2019,Unclassified,0.0238
+Black,2019,Unclassified,0.0365
+Asian,2019,Unclassified,0.0327
+Mixed Race,2019,Unclassified,0.0549
+Indigenous,2019,Unclassified,0.0874
+White,2018,Unclassified,0.0241
+Black,2018,Unclassified,0.0405
+Asian,2018,Unclassified,0.034
+Mixed Race,2018,Unclassified,0.0526
+Indigenous,2018,Unclassified,0.0955
+White,2017,Unclassified,0.0278
+Black,2017,Unclassified,0.0455
+Asian,2017,Unclassified,0.0518
+Mixed Race,2017,Unclassified,0.0606
+Indigenous,2017,Unclassified,0.1037
+White,2016,Unclassified,0.0328
+Black,2016,Unclassified,0.0475
+Asian,2016,Unclassified,0.0374
+Mixed Race,2016,Unclassified,0.0651
+Indigenous,2016,Unclassified,0.0969
+White,2015,Unclassified,0.0421
+Black,2015,Unclassified,0.0578
+Asian,2015,Unclassified,0.0443
+Mixed Race,2015,Unclassified,0.0693
+Indigenous,2015,Unclassified,0.1181
+White,2014,Unclassified,0.0473
+Black,2014,Unclassified,0.0662
+Asian,2014,Unclassified,0.0513
+Mixed Race,2014,Unclassified,0.0781
+Indigenous,2014,Unclassified,0.1226
