@@ -1,54 +1,54 @@
 Race,Year,Prenatal_Care,Percentage
-White,2023,None,0.0038
-Black,2023,None,0.009
-Asian,2023,None,0.0034
-Mixed Race,2023,None,0.0067
-Indigenous,2023,None,0.0218
-White,2022,None,0.0039
-Black,2022,None,0.0092
-Asian,2022,None,0.0044
-Mixed Race,2022,None,0.0069
-Indigenous,2022,None,0.0148
-White,2021,None,0.0038
-Black,2021,None,0.0097
-Asian,2021,None,0.0038
-Mixed Race,2021,None,0.007
-Indigenous,2021,None,0.0118
-White,2020,None,0.0038
-Black,2020,None,0.0101
-Asian,2020,None,0.0048
-Mixed Race,2020,None,0.0075
-Indigenous,2020,None,0.0125
-White,2019,None,0.0037
-Black,2019,None,0.0101
-Asian,2019,None,0.0043
-Mixed Race,2019,None,0.0067
-Indigenous,2019,None,0.0095
-White,2018,None,0.0038
-Black,2018,None,0.0108
-Asian,2018,None,0.005
-Mixed Race,2018,None,0.0071
-Indigenous,2018,None,0.0117
-White,2017,None,0.0037
-Black,2017,None,0.0113
-Asian,2017,None,0.0038
-Mixed Race,2017,None,0.0065
-Indigenous,2017,None,0.0162
-White,2016,None,0.0038
-Black,2016,None,0.0112
-Asian,2016,None,0.0044
-Mixed Race,2016,None,0.006
-Indigenous,2016,None,0.0148
-White,2015,None,0.0037
-Black,2015,None,0.0112
-Asian,2015,None,0.0051
-Mixed Race,2015,None,0.0059
-Indigenous,2015,None,0.0144
-White,2014,None,0.0041
-Black,2014,None,0.0116
-Asian,2014,None,0.0054
-Mixed Race,2014,None,0.0064
-Indigenous,2014,None,0.0174
+White,2023,No Prenatal Care,0.0038
+Black,2023,No Prenatal Care,0.009
+Asian,2023,No Prenatal Care,0.0034
+Mixed Race,2023,No Prenatal Care,0.0067
+Indigenous,2023,No Prenatal Care,0.0218
+White,2022,No Prenatal Care,0.0039
+Black,2022,No Prenatal Care,0.0092
+Asian,2022,No Prenatal Care,0.0044
+Mixed Race,2022,No Prenatal Care,0.0069
+Indigenous,2022,No Prenatal Care,0.0148
+White,2021,No Prenatal Care,0.0038
+Black,2021,No Prenatal Care,0.0097
+Asian,2021,No Prenatal Care,0.0038
+Mixed Race,2021,No Prenatal Care,0.007
+Indigenous,2021,No Prenatal Care,0.0118
+White,2020,No Prenatal Care,0.0038
+Black,2020,No Prenatal Care,0.0101
+Asian,2020,No Prenatal Care,0.0048
+Mixed Race,2020,No Prenatal Care,0.0075
+Indigenous,2020,No Prenatal Care,0.0125
+White,2019,No Prenatal Care,0.0037
+Black,2019,No Prenatal Care,0.0101
+Asian,2019,No Prenatal Care,0.0043
+Mixed Race,2019,No Prenatal Care,0.0067
+Indigenous,2019,No Prenatal Care,0.0095
+White,2018,No Prenatal Care,0.0038
+Black,2018,No Prenatal Care,0.0108
+Asian,2018,No Prenatal Care,0.005
+Mixed Race,2018,No Prenatal Care,0.0071
+Indigenous,2018,No Prenatal Care,0.0117
+White,2017,No Prenatal Care,0.0037
+Black,2017,No Prenatal Care,0.0113
+Asian,2017,No Prenatal Care,0.0038
+Mixed Race,2017,No Prenatal Care,0.0065
+Indigenous,2017,No Prenatal Care,0.0162
+White,2016,No Prenatal Care,0.0038
+Black,2016,No Prenatal Care,0.0112
+Asian,2016,No Prenatal Care,0.0044
+Mixed Race,2016,No Prenatal Care,0.006
+Indigenous,2016,No Prenatal Care,0.0148
+White,2015,No Prenatal Care,0.0037
+Black,2015,No Prenatal Care,0.0112
+Asian,2015,No Prenatal Care,0.0051
+Mixed Race,2015,No Prenatal Care,0.0059
+Indigenous,2015,No Prenatal Care,0.0144
+White,2014,No Prenatal Care,0.0041
+Black,2014,No Prenatal Care,0.0116
+Asian,2014,No Prenatal Care,0.0054
+Mixed Race,2014,No Prenatal Care,0.0064
+Indigenous,2014,No Prenatal Care,0.0174
 White,2023,Inadequate,0.1086
 Black,2023,Inadequate,0.1787
 Asian,2023,Inadequate,0.1321
