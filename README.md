@@ -2,6 +2,7 @@
 
 ## 💻 Access the Website
 You can view the project live at: [yantoniassi1.github.io](https://yantoniassi1.github.io/)
+This project was developed as part of the PP434 Automated Data Visualisation course at LSE
 
 This repository contains the following files:
 
