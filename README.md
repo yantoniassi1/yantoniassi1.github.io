@@ -5,7 +5,10 @@ You can view the project live at: [yantoniassi1.github.io](https://yantoniassi1.
 
 This project was developed as part of the PP434 Automated Data Visualisation course at LSE
 
-This repository contains the following files:
+
+
+
+**This repository contains the following files:**
 
 ### 📄 HTML Files  
 1. index.html (main page)
