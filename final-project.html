@@ -34,11 +34,14 @@
 
 <section>
     <h3>
-        About the project
+        Project Aims
     </h3>
     <p>
-        This project investigates the relationship between healthcare spending and health outcomes distribution in Brazil. Despite rising healthcare expenditure—from 8% of GDP in 2010 to nearly 10% in 2022 (WHO)—it remains unclear whether increased spending translates into improved outcomes. The project begins by analyzing healthcare expenditure growth across states and its distribution across spending categories. It then conducts a correlation analysis at the municipal level. To ensure better comparability, the project dives deeper into one specific indicator, adequacy of prenatal care, and a corresponding expenditure category.  Additionally, the analysis explores disparities in the distribution of benefits, highlighting that improvements are not uniformly experienced across different racial groups. It acknowledges that while some factors, like infrastructure investment and staff quality, are directly influenced by health budget allocation, others—such as GDP per capita, sanitation, and health habits—are harder to address and should be taken into account when determining drivers of health efficiency.
+        This project investigates the relationship between healthcare spending and the distribution of health outcomes in Brazil and seeks to answer the question: Does increased healthcare spending correlates with improved and equitably distributed health outcomes? 
     </p>
+    <P>
+        It adopts a spatial and temporal comparison at both the state and municipal levels, combined with a case study to ensure better comparability. The project begins by analyzing healthcare expenditure growth across states and its distribution across spending categories. It then conducts a correlation analysis at the municipal level. To ensure better comparability, the project includes a case study on adequacy of prenatal care, paired with a corresponding expenditure category. This approach enables a granular analysis of targeted spending outcomes while highlighting disparities across racial groups.
+    </P>
 </section>
 
 <section>
@@ -46,7 +49,23 @@
         Data
     </h3>
     <p>
-        This project relies on publicly available data from the Brazilian Ministry of Health. Health expenditure per capita (in Brazilian reais) is sourced from the Public Health Budget Information System (SIOPS), while spending by category is obtained from the Ambulatory Information System (SIA). Data on various health outcomes are accessible via DataSUS Tabnet, the Ministry's health data department’s portal.  Detailed information on prenatal care quality and racial distribution is provided by the Live Birth Information System (SINASC), available through the Live Birth Monitoring Dashboard. All datasets can easily be downloaded in CSV format after selecting the desired series, granularity, and time period. The data is published exclusively in Portuguese, and all labels were translated into English for this project. 
+            This project relies on publicly available data from the <a href="https://www.gov.br/saude/pt-br">Brazilian Ministry of Health</a>. 
+            Health expenditure per capita (in Brazilian reais) is sourced from the 
+            <a href="http://siops.datasus.gov.br/relindicadoresuf.php?escuf=3">Public Health Budget Information System (SIOPS)</a>, 
+            while spending by category is obtained from the 
+            <a href="https://datasus.saude.gov.br/acesso-a-informacao/producao-ambulatorial-sia-sus/">Ambulatory Information System (SIA)</a>. 
+            Data on various health outcomes are accessible via 
+            <a href="https://datasus.saude.gov.br/informacoes-de-saude-tabnet/">DataSUS Tabnet</a>, 
+            the Ministry's health data department’s portal. Detailed information on prenatal care quality and racial distribution is provided by the 
+            <a href="http://plataforma.saude.gov.br/natalidade/nascidos-vivos/">Live Birth Information System (SINASC)</a>, 
+            available through the <a href="http://plataforma.saude.gov.br/natalidade/nascidos-vivos/">Live Birth Monitoring Dashboard</a>.
+    </p>
+    <p>
+            All datasets can be exported in CSV format  after selecting the desired series, granularity, and time period. 
+            Additionally, data—except for SIOPS—can be fetched automatically using the 
+            <a href="https://www.scielo.br/j/csp/a/gdJXqcrW5PPDHX8rwPDYL7F/?lang=pt">R package microdatasus</a> 
+            by specifying the start year, end year, and desired database. The data is published exclusively in Portuguese, 
+            and all labels were translated into English for this project.
     </p>
 </section>
 
@@ -73,10 +92,12 @@
         These findings suggest that increased healthcare spending does not automatically translate into improved health outcomes, pointing instead to potential inefficiencies in resource allocation and systemic management.
     </p>
     <figure id="Location3"></figure>
-    <p>
+    <p style="color: #0b9066">
         *Zoom in on the graph to better align with the selected indicators, click on the region legend to highlight specific areas and reveal outcome patterns, and hover over a dot to view detailed information about the chosen variable.
-    </p>    
+    </p>   
 </section>
+
+<br> 
 
 </section>
     <h3> Case Study on Adequacy of Prenatal Care </h3>
@@ -92,11 +113,12 @@
     <p>
         The bar graph below disaggregates prenatal care adequacy by race over the years. In 2023, nearly 83% of white women received adequate prenatal care, compared to 72% of Black women and only 50% of Indigenous women. Although these figures represent a clear improvement from previous years, they highlight a persistent gap. This analysis underscores the importance of looking beyond overall health outcome averages. Without targeted measures to ensure investments reach historically underserved groups, increased spending alone may not effectively address existing inequalities.
     </p>
+    <br>
     <figure id="Location5"></figure>
 </section>
 
 </section>
-    <h3> Challenges </h3>
+    <h3> Challenges Faced </h3>
     <p>
         One of the main challenges I faced was selecting the most effective visualizations—those capable of presenting complex information in a clear and digestible way. On one hand, using data at the state level (26 states) provided too small of a sample for meaningful correlation analysis, while on the other hand, analyzing all 5,500+ Brazilian municipalities introduced visual cluttering. After trying out different visualisation formats for the third visualisation, I decided to filter the top 3,000 municipalities by spending and allow users to interactively select specific regions, striking a balance between granularity and visual clarity. Another challenge was narrowing the project's scope. With countless factors influencing the relationship between healthcare spending and outcomes, there were many possibilities of data series to explore. However, to maintain focus and coherence, I concentrated on health outcomes and a targeted case study. Finally, working directly with Vega-Lite to code visualizations revealed limitations in achieving specific features, especially the scatter plots and dual-axis time series graphs. To overcome these constraints, I integrated the Altair library in Python, which offered me greater control. 
     </p> 
@@ -105,10 +127,10 @@
 </section>
     <h3> Conclusion </h3>
     <p>
-        This project showcases the counterintuitive relationship between healthcare spending and health outcomes in Brazil. Even in places with high spending,  inefficiencies remain evident, with neutral or even negative correlations between expenditure and indicators such as the number of hospital beds, gross mortality, and avoidable cause mortality. Although increased targeted spending on medical consultations aligns with improvements in prenatal care adequacy, the broader correlation with health outcomes remains inconsistent. Moreover, when positive correlations do emerge, the benefits are not evenly distributed across the population.
+        This project demonstrates that increased healthcare spending in Brazil does not consistently lead to improved or equitably distributed health outcomes. Even in regions with high levels of expenditure, inefficiencies persist, as evidenced by neutral or even negative correlations with key indicators such as the number of hospital beds, gross mortality, and avoidable cause mortality. While targeted spending on medical consultations has shown a positive correlation with improvements in prenatal care adequacy, this trend does not consistently extend to broader health outcomes. Even where spending correlates with positive impacts, these benefits are not evenly distributed across the population, as racial and regional disparities continue to shape health outcomes.
     </p>
     <p>
-        It is important to emphasize that these findings showcase correlation, not causation. Evaluating the true impact of policies requires more rigorous causal analysis tailored to local contexts. However, the data hints that factors beyond financial investment alone play a decisive role in determining health outcomes. For example, it can include resource allocation efficiency, existing infrastructure quality, healthcare workforce capacity, and broader socio-economic conditions. While addressing these structural and operational inefficiencies is essential, it remains a complex challenge. Ultimately, the results show that when investment does matter, it should be accompanied by inclusive interventions to ensure equitable health improvements across all population groups.
+        It is important to emphasize that these findings showcase correlation, not causation. Evaluating the true impact of specific policies requires rigorous causal analysis tailored to local contexts. Future research is needed to identify which spending categories yield the highest returns on health outcomes and understand how non-financial factors—such as infrastructure quality, workforce capacity, and socio-economic conditions—shape health outcomes. Ultimately, in cases where increased healthcare spending is proven effective, it must be paired with inclusive and targeted strategies to ensure equitable and sustainable health improvements across all population groups. 
     </p>
 </section>
 

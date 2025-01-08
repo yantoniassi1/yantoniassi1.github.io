@@ -4,13 +4,13 @@
     "text": "Health Expenditure Per Capita by State in Brazil (2010-2023)",
     "anchor": "start",
     "subtitle": ["Source: DataSUS | Public Health Budget Information System (SIOPS)"],
-    "fontSize": 16,
-    "subtitleFontSize": 12,
+    "fontSize": 18,
+    "subtitleFontSize": 14,
     "fontWeight": "bold"
   },
   "width": 800,
   "height": 600,
-"autosize": {
+  "autosize": {
     "type": "fit-x",
     "resize": true,
     "contains": "padding"
@@ -77,7 +77,7 @@
       },
       "legend": {
         "orient": "right",
-        "labelFontSize": 10,
+        "labelFontSize": 12,
         "titleFontSize": 12,
         "symbolType": "circle",
         "symbolSize": 200
